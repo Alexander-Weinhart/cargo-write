@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 
@@ -10,15 +11,15 @@
 /**
 * An object used to package all data conveniently as needed.
 */
-public class Jorts.NoteData : Object {
+public class CargoWrite.NoteData : Object {
 
     // Will determine properties (or lack thereof) for any new note
-    public static Jorts.Themes latest_theme = Jorts.Constants.DEFAULT_THEME;
-    public static int latest_zoom = Jorts.Constants.DEFAULT_ZOOM;
-    public static bool latest_mono = Jorts.Constants.DEFAULT_MONO;
+    public static CargoWrite.Themes latest_theme = CargoWrite.Constants.DEFAULT_THEME;
+    public static int latest_zoom = CargoWrite.Constants.DEFAULT_ZOOM;
+    public static bool latest_mono = CargoWrite.Constants.DEFAULT_MONO;
 
     public string? title;
-    public Jorts.Themes? theme;
+    public CargoWrite.Themes? theme;
     public string? content;
     public bool? monospace;
     public int? zoom;
@@ -31,13 +32,13 @@ public class Jorts.NoteData : Object {
     */
     construct {
         // We assign defaults in case theres args missing
-        this.title = title ?? Jorts.Utils.random_title ();
-        this.theme = theme ?? Jorts.Themes.random_theme (latest_theme);
+        this.title = title ?? CargoWrite.Utils.random_title ();
+        this.theme = theme ?? CargoWrite.Themes.random_theme (latest_theme);
         this.content = content ?? "";
         this.monospace = monospace ?? latest_mono;
         this.zoom = zoom ?? latest_zoom;
-        this.width = width ?? Jorts.Constants.DEFAULT_WIDTH;
-        this.height = height ?? Jorts.Constants.DEFAULT_HEIGHT;
+        this.width = width ?? CargoWrite.Constants.DEFAULT_WIDTH;
+        this.height = height ?? CargoWrite.Constants.DEFAULT_HEIGHT;
     }
 
     /*************************************************/
@@ -46,17 +47,17 @@ public class Jorts.NoteData : Object {
     */
     public NoteData.from_json (Json.Object node) {
         title       = node.get_string_member_with_default ("title", (_("Forgot title!")));
-        theme       = (Jorts.Themes)node.get_int_member_with_default ("color", Jorts.Themes.random_theme ());
+        theme       = (CargoWrite.Themes)node.get_int_member_with_default ("color", CargoWrite.Themes.random_theme ());
         content     = node.get_string_member_with_default ("content","");
-        monospace   = node.get_boolean_member_with_default ("monospace", Jorts.Constants.DEFAULT_MONO);
-        zoom        = (int)node.get_int_member_with_default ("zoom", Jorts.Constants.DEFAULT_ZOOM);
+        monospace   = node.get_boolean_member_with_default ("monospace", CargoWrite.Constants.DEFAULT_MONO);
+        zoom        = (int)node.get_int_member_with_default ("zoom", CargoWrite.Constants.DEFAULT_ZOOM);
 
         // Make sure the values are nothing crazy
-        if (zoom < Jorts.Constants.ZOOM_MIN)        { zoom = Jorts.Constants.ZOOM_MIN;}
-        else if (zoom > Jorts.Constants.ZOOM_MAX)   { zoom = Jorts.Constants.ZOOM_MAX;}
+        if (zoom < CargoWrite.Constants.ZOOM_MIN)        { zoom = CargoWrite.Constants.ZOOM_MIN;}
+        else if (zoom > CargoWrite.Constants.ZOOM_MAX)   { zoom = CargoWrite.Constants.ZOOM_MAX;}
 
-        width       = (int)node.get_int_member_with_default ("width", Jorts.Constants.DEFAULT_WIDTH);
-        height      = (int)node.get_int_member_with_default ("height", Jorts.Constants.DEFAULT_HEIGHT);
+        width       = (int)node.get_int_member_with_default ("width", CargoWrite.Constants.DEFAULT_WIDTH);
+        height      = (int)node.get_int_member_with_default ("height", CargoWrite.Constants.DEFAULT_HEIGHT);
     }
 
     /*************************************************/

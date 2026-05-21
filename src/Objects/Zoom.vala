@@ -3,13 +3,14 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*************************************************/
 /**
 * A register of all possible zoom values we have
 */
-public enum Jorts.Zoom {
+public enum CargoWrite.Zoom {
     ANTSIZED,
     MUCHSMALLER,
     SMALLER,

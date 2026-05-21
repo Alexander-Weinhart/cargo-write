@@ -1,5 +1,5 @@
 # Name our project
-project('io.github.elly_code.jorts', ['vala', 'c'],
+project('io.github.cargowrite.CargoWrite', ['vala', 'c'],
     version: '4.0.1'
 )
 
@@ -57,7 +57,7 @@ config_file = configure_file(
 # Le stylesheet
 gresource = gnome.compile_resources(
     'gresource',
-    'data' / 'jorts.gresource.xml',
+    'data' / 'cargo-write.gresource.xml',
     source_dir: 'data'
 )
 

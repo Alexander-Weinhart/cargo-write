@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: 2025-06-02 19:23+0300\n"
-"Last-Translator: Orionas Kakomoiroglou <209243298+OrionasKakomoiroglou@users."
-"noreply.github.com>\n"
+"Last-Translator: Orionas Kakomoiroglou "
+"<209243298+OrionasKakomoiroglou@users.noreply.github.com>\n"
 "Language-Team: Greek, Modern (1453-)\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -14,15 +14,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 46.0\n"
 
-#: data/jorts.desktop.in:5
-msgid "Jorts"
-msgstr "Jorts"
+#: data/cargo-write.desktop.in:5
+msgid "Cargo Write"
+msgstr "Cargo Write"
 
-#: data/jorts.desktop.in:6 data/jorts.metainfo.xml.in:43
+#: data/cargo-write.desktop.in:6 data/cargo-write.metainfo.xml.in:43
 msgid "Sticky notes"
 msgstr "Σημειώσεις"
 
-#: data/jorts.desktop.in:7
+#: data/cargo-write.desktop.in:7
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
@@ -30,57 +30,53 @@ msgstr ""
 "Γράψτε σημειώσεις, υπενθυμίσεις, σκέψεις που σας κατέβηκαν στο μυαλό και "
 "άλλες πληροφορίες"
 
-#: data/jorts.desktop.in:13
+#: data/cargo-write.desktop.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 "κείμενο;απλό;απλό κείμενο;σημειωματάριο;σημειώσεις;αυτοκόλλητο;post-it;"
 
-#: data/jorts.desktop.in:18
+#: data/cargo-write.desktop.in:18
 msgid "New sticky note"
 msgstr "Νέα σημείωση"
 
-#: data/jorts.desktop.in:23
+#: data/cargo-write.desktop.in:23
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Ρυθμίσεις"
 
-#: data/jorts.metainfo.xml.in:8
+#: data/cargo-write.metainfo.xml.in:8
 msgid "Write on colourful little squares"
 msgstr "Γράψτε σε πολύχρωμα τετράγωνα"
 
-#: data/jorts.metainfo.xml.in:10
-msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "Ούτε τζιν ούτε βερμούδα, όπως και τα Jorts."
-
-#: data/jorts.metainfo.xml.in:11
+#: data/cargo-write.metainfo.xml.in:11
 msgid "Features include:"
 msgstr "Χαρακτηριστικά Εφαρμογής:"
 
-#: data/jorts.metainfo.xml.in:13
+#: data/cargo-write.metainfo.xml.in:13
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
 msgstr "Χρώματα: Δέκα όμορφα θέματα. Κάθε νέα σημείωση χρωματίζεται τυχαία."
 
-#: data/jorts.metainfo.xml.in:14
+#: data/cargo-write.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
 msgstr ""
 "Έρχεται στα μέτρα σας: Οι νέες σημειώσεις παίρνουν τη μεγέθυνση που ορίσατε "
 "τελευταία"
 
-#: data/jorts.metainfo.xml.in:15
+#: data/cargo-write.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
 "Χαριτωμένοι τίτλοι: Κάθε νέα σημείωση έχει έναν αστείο ή χαριτωμένο τυχαίο "
 "(επεξεργάσιμο) τίτλο."
 
-#: data/jorts.metainfo.xml.in:16
+#: data/cargo-write.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
 msgstr "Πρακτικότητα: Μπορείτε να ανοίξετε συνδέσμους και emails με Ctrl+Click"
 
-#: data/jorts.metainfo.xml.in:17
+#: data/cargo-write.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
 msgstr "Ιδιωτικότητα: Δοκιμάστε τη λειτουργία μουτζούρας!"
 
-#: data/jorts.metainfo.xml.in:19
+#: data/cargo-write.metainfo.xml.in:19
 msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce. The community "
 "liked it so much, we thought it would be great to revive it!"
@@ -89,55 +85,55 @@ msgstr ""
 "lainsce. Άρεσε τόσο πολύ στην κοινότητα,\n"
 "οπότε σκεφτήκαμε ότι θα ήταν ωραίο να την αναβιώσουμε!"
 
-#: data/jorts.metainfo.xml.in:27
+#: data/cargo-write.metainfo.xml.in:27
 msgid "Lainsce + Stella"
 msgstr "Lainsce + Στέλλα"
 
-#: data/jorts.metainfo.xml.in:44
+#: data/cargo-write.metainfo.xml.in:44
 msgid "Sticky note"
 msgstr "Σημείωση"
 
-#: data/jorts.metainfo.xml.in:45
+#: data/cargo-write.metainfo.xml.in:45
 msgid "Stickies"
 msgstr "Σημειώσεις"
 
-#: data/jorts.metainfo.xml.in:46
+#: data/cargo-write.metainfo.xml.in:46
 msgid "Colourful"
 msgstr "Πολύχρωμο"
 
-#: data/jorts.metainfo.xml.in:47
+#: data/cargo-write.metainfo.xml.in:47
 msgid "Notes"
 msgstr "Σημειώσεις"
 
-#: data/jorts.metainfo.xml.in:48
+#: data/cargo-write.metainfo.xml.in:48
 msgid "Cute"
 msgstr "Χαριτωμένο"
 
-#: data/jorts.metainfo.xml.in:49
+#: data/cargo-write.metainfo.xml.in:49
 msgid "Desktop"
 msgstr "Επιφάνεια Εργασίας"
 
-#: data/jorts.metainfo.xml.in:50
+#: data/cargo-write.metainfo.xml.in:50
 msgid "Reminder"
 msgstr "Υπενθύμιση"
 
-#: data/jorts.metainfo.xml.in:51
+#: data/cargo-write.metainfo.xml.in:51
 msgid "Utility"
 msgstr "Βοήθημα"
 
-#: data/jorts.metainfo.xml.in:52
+#: data/cargo-write.metainfo.xml.in:52
 msgid "Pantheon"
 msgstr "Pantheon"
 
-#: data/jorts.metainfo.xml.in:53
+#: data/cargo-write.metainfo.xml.in:53
 msgid "elementary OS"
 msgstr "elementary OS"
 
-#: data/jorts.metainfo.xml.in:71
+#: data/cargo-write.metainfo.xml.in:71
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "Ένα σημείωμα με το θέμα \"Μύρτιλλο\""
 
-#: data/jorts.metainfo.xml.in:75
+#: data/cargo-write.metainfo.xml.in:75
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
@@ -145,98 +141,98 @@ msgstr ""
 "Κάνετε streaming; Ανησυχείτε ότι κάποιος σας κρυφοκοιτάζει; Δοκιμάστε τη "
 "λειτουργία μουτζούρας!"
 
-#: data/jorts.metainfo.xml.in:79
+#: data/cargo-write.metainfo.xml.in:79
 msgid "Look! Ascii art in a sticky note!"
 msgstr "Κοιτάξτε! Ζωγραφιές με γράμματα σε μία σημείωση!"
 
-#: data/jorts.metainfo.xml.in:83
+#: data/cargo-write.metainfo.xml.in:83
 msgid "The preferences dialog in light mode"
 msgstr "Οι ρυθμίσεις στη φωτεινή λειτουργία"
 
-#: data/jorts.metainfo.xml.in:87
+#: data/cargo-write.metainfo.xml.in:87
 msgid "The preferences dialog in dark mode"
 msgstr "Οι ρυθμίσεις στη σκοτεινή λειτουργία"
 
-#: data/jorts.metainfo.xml.in:95
+#: data/cargo-write.metainfo.xml.in:95
 #, fuzzy
-msgid "🚀 4.0.0 Jorts of Hyperspace!"
-msgstr "3.0.0 Jorts of Thunder"
+msgid "🚀 4.0.0 Launch Update"
+msgstr "3.0.0 Cargo Write of Thunder"
 
-#: data/jorts.metainfo.xml.in:97
+#: data/cargo-write.metainfo.xml.in:97
 msgid "Version 4 to align with Gtk version"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:98
+#: data/cargo-write.metainfo.xml.in:98
 msgid "Added button to toggle lists, and ability to customize them"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:99
+#: data/cargo-write.metainfo.xml.in:99
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:100
+#: data/cargo-write.metainfo.xml.in:100
 msgid "More zoom options"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:101
+#: data/cargo-write.metainfo.xml.in:101
 msgid "Keyboard shortcuts work from popover now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:102
+#: data/cargo-write.metainfo.xml.in:102
 msgid "A couple visual bugfixes as well!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:103
+#: data/cargo-write.metainfo.xml.in:103
 msgid "Various under the hood performance improvements"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:140
-#: data/jorts.metainfo.xml.in:180
+#: data/cargo-write.metainfo.xml.in:105 data/cargo-write.metainfo.xml.in:140
+#: data/cargo-write.metainfo.xml.in:180
 msgid "😎 Guests stars:"
 msgstr "😎 Αστέρια επισκεπτών:"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/cargo-write.metainfo.xml.in:107
 #, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
 msgstr "Ενημερωμένες ιαπωνικές μεταφράσεις χάρη στο @RyoNakano!"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/cargo-write.metainfo.xml.in:108
 msgid "You, the user, for liking this lil app!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:120
+#: data/cargo-write.metainfo.xml.in:120
 msgid "Added windows build. It doesnt need admin rights. Mostly works."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:125
+#: data/cargo-write.metainfo.xml.in:125
 msgid "No fun allowed: revert back to default style"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:130
+#: data/cargo-write.metainfo.xml.in:130
 #, fuzzy
-msgid "🕷️ 3.4.0 Scary Jorts of Boo"
-msgstr "3.4.0 Jorts του φθινοπώρου"
+msgid "🕷️ 3.4.0 Autumn Update"
+msgstr "3.4.0 Cargo Write του φθινοπώρου"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/cargo-write.metainfo.xml.in:132
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Ορισμένα στοιχεία του UI εμφανίζονται αφού εμφανιστούν, για μια κομψή "
 "ατμόσφαιρα"
 
-#: data/jorts.metainfo.xml.in:133
+#: data/cargo-write.metainfo.xml.in:133
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L για να εστιάσετε τον τίτλο της σημείωσης"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/cargo-write.metainfo.xml.in:134
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M για να ανοίξετε τις ρυθμίσεις σημειώσεων τώρα"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/cargo-write.metainfo.xml.in:135
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Αριθμός για γρήγορη αλλαγή θέματος"
 
-#: data/jorts.metainfo.xml.in:136
+#: data/cargo-write.metainfo.xml.in:136
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -245,7 +241,7 @@ msgstr ""
 "Νέα ρύθμιση σημειώσεων: Monospace. Θα μπορούσε να είναι για την "
 "προσβασιμότητα, θα μπορούσε να είναι για ασσύριους σκιτσογράφους."
 
-#: data/jorts.metainfo.xml.in:137
+#: data/cargo-write.metainfo.xml.in:137
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -253,29 +249,29 @@ msgstr ""
 "Καθαρότερος, καλύτερος κώδικας κάτω από το καπό. Πιθανώς οριακά βελτιωμένες "
 "επιδόσεις ή λιγότερα σφάλματα στις άκρες."
 
-#: data/jorts.metainfo.xml.in:138
+#: data/cargo-write.metainfo.xml.in:138
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Προστέθηκε μια επιλογή γραμμής εντολών reset-settings. Θα μπορούσε να είναι "
 "χρήσιμη."
 
-#: data/jorts.metainfo.xml.in:142
+#: data/cargo-write.metainfo.xml.in:142
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "Ο @wpkelso ξαναχτυπάει με μια καταπληκτική ειδική έκδοση εικόνας!"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/cargo-write.metainfo.xml.in:149
 msgid ""
-"Bugfix: Fix Jorts lingering in the background not opening anymore if all "
-"windows were closed (#77)"
+"Bugfix: Fix Cargo Write lingering in the background not opening anymore if "
+"all windows were closed (#77)"
 msgstr ""
-"Διόρθωση σφάλματος: Διόρθωση των Jorts που παραμένουν στο παρασκήνιο και δεν "
-"ανοίγουν πια αν όλα τα παράθυρα ήταν κλειστά (#77)"
+"Διόρθωση σφάλματος: Διόρθωση των Cargo Write που παραμένουν στο παρασκήνιο "
+"και δεν ανοίγουν πια αν όλα τα παράθυρα ήταν κλειστά (#77)"
 
-#: data/jorts.metainfo.xml.in:155
-msgid "3.3.0 Star Platinum Jorts"
-msgstr "3.3.0 Star Platinum Jorts"
+#: data/cargo-write.metainfo.xml.in:155
+msgid "3.3.0 Interface Update"
+msgstr "3.3.0 Interface Update"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/cargo-write.metainfo.xml.in:157
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -284,24 +280,24 @@ msgstr ""
 "παρεμπόδιζε την επεξεργασία κειμένου. Μόνο η μπάρα ενεργειών και η κεφαλίδα "
 "είναι τώρα (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:158
+#: data/cargo-write.metainfo.xml.in:158
 msgid "Added more random titles"
 msgstr "Προστέθηκαν περισσότεροι τυχαίοι τίτλοι"
 
-#: data/jorts.metainfo.xml.in:159
+#: data/cargo-write.metainfo.xml.in:159
 msgid "Buttons for add/remove autostart"
 msgstr "Κουμπιά για προσθήκη/αφαίρεση αυτόματης εκκίνησης"
 
-#: data/jorts.metainfo.xml.in:160
+#: data/cargo-write.metainfo.xml.in:160
 msgid "Some more title placeholders"
 msgstr "Μερικά ακόμη εικονικά στοιχεία τίτλου"
 
-#: data/jorts.metainfo.xml.in:161
+#: data/cargo-write.metainfo.xml.in:161
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Αλλαγές στο παρασκήνιο για καθαρότερο κώδικα"
 
-#: data/jorts.metainfo.xml.in:167
+#: data/cargo-write.metainfo.xml.in:167
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -310,25 +306,25 @@ msgstr ""
 "χώρο. Τώρα έχει διορθωθεί - με μια πιο φανταχτερή κινούμενη εικόνα για "
 "εκκίνηση."
 
-#: data/jorts.metainfo.xml.in:172
-msgid "🌈 3.2.0 Jorts of Resilience and Love"
+#: data/cargo-write.metainfo.xml.in:172
+msgid "🌈 3.2.0 Pride Update"
 msgstr "🌈 3.2.0 Τζορτζ της Ανθεκτικότητας και της Αγάπης"
 
-#: data/jorts.metainfo.xml.in:174
+#: data/cargo-write.metainfo.xml.in:174
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Έγινε προσθήκη εφέ κίνησης όταν ενεργοποιείτε/απενεργοποιείτε τη μπάρα"
 
-#: data/jorts.metainfo.xml.in:175
+#: data/cargo-write.metainfo.xml.in:175
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 "Διορθώθηκε η θολούρα στις οθόνες υψηλής ανάλυσης λόγω χαζομάρων του Flathub"
 
-#: data/jorts.metainfo.xml.in:176
+#: data/cargo-write.metainfo.xml.in:176
 msgid "Added high-resolution screenshots"
 msgstr "Προστέθηκαν στιγμιότυπα υψηλής ανάλυσης"
 
-#: data/jorts.metainfo.xml.in:177
+#: data/cargo-write.metainfo.xml.in:177
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -336,16 +332,16 @@ msgstr ""
 "Διόρθωση σφάλματος της τελευταίας στιγμής, κατά κάποιο τρόπο τα accels δεν "
 "λειτουργούσαν όταν οι Προτιμήσεις ήταν εστιασμένες"
 
-#: data/jorts.metainfo.xml.in:178
+#: data/cargo-write.metainfo.xml.in:178
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Λίγο νοικοκυριό για την FR και την DE, ενώ είναι σε αυτό"
 
-#: data/jorts.metainfo.xml.in:182
+#: data/cargo-write.metainfo.xml.in:182
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Έκδοση Υπερηφάνειας: Ένα υπέροχο προσωρινό εικονίδιο από το @wpkelso"
 
-#: data/jorts.metainfo.xml.in:183
+#: data/cargo-write.metainfo.xml.in:183
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Ενημερωμένες ελληνικές μεταφράσεις χάρη στον @OrionasKakomoiroglou!"
 

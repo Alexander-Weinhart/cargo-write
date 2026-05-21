@@ -3,12 +3,13 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * A subclass of Gtk.EditableLabel, incorporating some conveniences
 */
-public class Jorts.EditableLabel : Granite.Bin {
+public class CargoWrite.EditableLabel : Granite.Bin {
 
     private Gtk.EditableLabel editablelabel;
     public signal void changed ();

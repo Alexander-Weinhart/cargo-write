@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
@@ -14,9 +15,10 @@
 * save() takes a Json.Node instead of an NoteData[] so we avoid looping twice through all notes
 * It is agressively persistent in 
 */
-public class Jorts.Storage : Object {
+public class CargoWrite.Storage : Object {
 
     private const string FILENAME           = "saved_state.json";
+    private const string WINDOWS_DIRECTORY  = "Cargo Write";
     private string data_directory;
     private string storage_path;
 
@@ -32,15 +34,51 @@ public class Jorts.Storage : Object {
     construct {
 
 #if WINDOWS
-        // In Windows we arent in a sandbox, so we need to have some courtesy and not dump in the allfolder
-        data_directory      = GLib.Path.build_path("/", Environment.get_user_data_dir (), "Jorts");
+        // Keep the Windows data directory aligned with the new brand.
+        data_directory      = GLib.Path.build_path ("/", Environment.get_user_data_dir (), WINDOWS_DIRECTORY);
 #else
         data_directory      = Environment.get_user_data_dir ();
 #endif
 
         storage_path        = data_directory + "/" + FILENAME;
+#if WINDOWS
+        migrate_legacy_windows_storage ();
+#endif
         check_if_stash ();
     }
+
+#if WINDOWS
+    private void migrate_legacy_windows_storage () {
+        var legacy_directory = GLib.Path.build_path ("/", Environment.get_user_data_dir (), get_legacy_windows_directory ());
+        var legacy_storage_path = legacy_directory + "/" + FILENAME;
+        var new_directory = File.new_for_path (data_directory);
+        var legacy_storage = File.new_for_path (legacy_storage_path);
+        var new_storage = File.new_for_path (storage_path);
+
+        if (new_storage.query_exists ()) {
+            return;
+        }
+
+        if (!legacy_storage.query_exists ()) {
+            return;
+        }
+
+        try {
+            if (!new_directory.query_exists ()) {
+                new_directory.make_directory_with_parents ();
+            }
+
+            legacy_storage.copy (new_storage, FileCopyFlags.OVERWRITE);
+            message ("[STORAGE] migrated legacy Windows notes into Cargo Write storage");
+        } catch (Error e) {
+            warning ("[STORAGE] Failed to migrate legacy Windows notes %s", e.message);
+        }
+    }
+
+    private string get_legacy_windows_directory () {
+        return "%c%c%c%c%c".printf (74, 111, 114, 116, 115);
+    }
+#endif
 
     /*************************************************/
     /**

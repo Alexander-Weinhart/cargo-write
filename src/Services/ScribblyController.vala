@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*************************************************/
@@ -10,9 +11,9 @@
 * Responsible to apply RedactedScript font
 * Give it a window and it will simply follow settings
 */
-public class Jorts.ScribblyController : Object {
+public class CargoWrite.ScribblyController : Object {
 
-    private weak Jorts.StickyNoteWindow window;
+    private weak CargoWrite.StickyNoteWindow window;
 
     private bool _scribble;
     public bool scribble {
@@ -20,7 +21,7 @@ public class Jorts.ScribblyController : Object {
         set { scribble_follow_focus (value);}
     }
 
-    public ScribblyController (Jorts.StickyNoteWindow window) {
+    public ScribblyController (CargoWrite.StickyNoteWindow window) {
         this.window = window;
 
         Application.gsettings.bind (

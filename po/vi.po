@@ -1,9 +1,9 @@
 # Vietnamese translation by Vietnam Linux L10n <https://github.com/linux-l10n-vi>
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the io.github.elly_code.jorts package.
+# This file is distributed under the same license as the io.github.cargowrite.CargoWrite package.
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: 2025-12-14 19:31+0700\n"
@@ -356,12 +356,12 @@ msgstr ""
 "Chúc một ngày tốt lành!🎇\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Xóa Jorts khỏi hệ thống tự khởi động"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Xóa Cargo Write khỏi hệ thống tự khởi động"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Đặt Jorts để bắt đầu với máy tính"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Đặt Cargo Write để bắt đầu với máy tính"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -403,8 +403,8 @@ msgid "Disable"
 msgstr "Tắt"
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Tự động khởi động Jorts"
+msgid "Automatically start Cargo Write"
+msgstr "Tự động khởi động Cargo Write"
 
 #: src/Views/PreferencesView.vala:134
 msgid "Show your sticky notes when you log in"
@@ -424,16 +424,16 @@ msgstr "Đóng tùy chỉnh"
 
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
-msgid " - Jorts"
-msgstr " - Jorts"
+msgid " - Cargo Write"
+msgstr " - Cargo Write"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-msgid "Preferences for your Jorts"
-msgstr "Tùy chỉnh cho Jorts của bạn"
+msgid "Preferences for Cargo Write"
+msgstr "Tùy chỉnh cho Cargo Write của bạn"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"

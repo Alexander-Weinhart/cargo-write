@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*************************************************/
@@ -11,10 +12,10 @@
 * Mainly, this abstracts zoom into an int and swap CSS classes
 * As a treat it includes also the plumbing for ctrl+scroll zooming
 */
-public class Jorts.ZoomController : Object {
+public class CargoWrite.ZoomController : Object {
 
     private static bool is_control_key_pressed = false;
-    private weak Jorts.StickyNoteWindow window;
+    private weak CargoWrite.StickyNoteWindow window;
 
     // Avoid setting this unless it is to restore a specific value, do_set_zoom does not check input
     private int _old_zoom;
@@ -23,14 +24,14 @@ public class Jorts.ZoomController : Object {
         set {do_set_zoom (value);}
     }
 
-    public ZoomController (Jorts.StickyNoteWindow window) {
+    public ZoomController (CargoWrite.StickyNoteWindow window) {
         this.window = window;
     }
 
     /**
     * Handler. Wraps a zoom enum into the correct function-
     */
-    public void zoom_changed (Jorts.Zoomkind zoomkind) {
+    public void zoom_changed (CargoWrite.Zoomkind zoomkind) {
         debug ("Zoom changed!");
         switch (zoomkind) {
             case Zoomkind.ZOOM_IN:              zoom_in (); return;          // vala-lint=double-spaces
@@ -44,7 +45,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go above limit
     */
     public void zoom_in () {
-        if ((_old_zoom + 20) <= Jorts.Constants.ZOOM_MAX) {
+        if ((_old_zoom + 20) <= CargoWrite.Constants.ZOOM_MAX) {
             zoom = _old_zoom + 20;
         } else {
             Gdk.Display.get_default ().beep ();
@@ -52,8 +53,8 @@ public class Jorts.ZoomController : Object {
     }
 
     public void zoom_default () {
-        if (_old_zoom != Jorts.Constants.DEFAULT_ZOOM ) {
-            zoom = Jorts.Constants.DEFAULT_ZOOM;
+        if (_old_zoom != CargoWrite.Constants.DEFAULT_ZOOM ) {
+            zoom = CargoWrite.Constants.DEFAULT_ZOOM;
         } else {
             Gdk.Display.get_default ().beep ();
         }
@@ -63,7 +64,7 @@ public class Jorts.ZoomController : Object {
     * Wrapper to check an increase doesnt go below limit
     */
     public void zoom_out () {
-        if ((_old_zoom - 20) >= Jorts.Constants.ZOOM_MIN) {
+        if ((_old_zoom - 20) >= CargoWrite.Constants.ZOOM_MIN) {
             zoom = _old_zoom - 20;
         } else {
             Gdk.Display.get_default ().beep ();
@@ -77,12 +78,12 @@ public class Jorts.ZoomController : Object {
         debug ("Setting zoom: " + zoom.to_string ());
 
         // Switches the classes that control font size
-        window.remove_css_class (Jorts.Zoom.from_int ( _old_zoom).to_css_class ());
+        window.remove_css_class (CargoWrite.Zoom.from_int ( _old_zoom).to_css_class ());
         _old_zoom = new_zoom;
-        window.add_css_class (Jorts.Zoom.from_int ( new_zoom).to_css_class ());
+        window.add_css_class (CargoWrite.Zoom.from_int ( new_zoom).to_css_class ());
 
         // Adapt headerbar size to avoid weird flickering
-        window.view.headerbar.height_request = Jorts.Zoom.from_int (new_zoom).to_ui_size ();
+        window.view.headerbar.height_request = CargoWrite.Zoom.from_int (new_zoom).to_ui_size ();
 
         // Reflect the number in the popover
         window.popover.zoom = new_zoom;

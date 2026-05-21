@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: 2025-12-27 12:46+0100\n"
@@ -352,12 +352,12 @@ msgstr ""
 "Buona giornata! 🎇\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Rimuovere Jorts dall'avvio automatico del sistema"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Rimuovere Cargo Write dall'avvio automatico del sistema"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Impostare Jorts per l'avvio con il computer"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Impostare Cargo Write per l'avvio con il computer"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -399,8 +399,8 @@ msgid "Disable"
 msgstr "Disabilitare"
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Avvia automaticamente Jorts"
+msgid "Automatically start Cargo Write"
+msgstr "Avvia automaticamente Cargo Write"
 
 #: src/Views/PreferencesView.vala:134
 msgid "Show your sticky notes when you log in"
@@ -420,7 +420,7 @@ msgstr "Chiudere le preferenze"
 
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
-msgid " - Jorts"
+msgid " - Cargo Write"
 msgstr " - Pantaloncini"
 
 #. ******************************************
@@ -428,8 +428,8 @@ msgstr " - Pantaloncini"
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-msgid "Preferences for your Jorts"
-msgstr "Preferenze per i tuoi Jorts"
+msgid "Preferences for Cargo Write"
+msgstr "Preferenze per i tuoi Cargo Write"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"

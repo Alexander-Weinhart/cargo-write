@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/cargowrite/CargoWrite">
+    <file compressed="true" alias="Application.css">Application.css</file>
+    <file compressed="true" alias="Themes.css">Themes.css</file>
+    <file compressed="true" alias="icons/scalable/actions/list-add-symbolic.svg">icons/scalable/actions/list-add-symbolic.svg</file>
+    <file compressed="true" alias="icons/scalable/actions/view-list-symbolic.svg">icons/scalable/actions/view-list-symbolic.svg</file>
+    <file compressed="true" alias="icons/scalable/emblems/emblem-system-symbolic.svg">icons/scalable/emblems/emblem-system-symbolic.svg</file>
+    <file compressed="true" alias="icons/scalable/emotes/face-cool-symbolic.svg">icons/scalable/emotes/face-cool-symbolic.svg</file>
+    <file compressed="true" alias="icons/scalable/places/user-trash-symbolic.svg">icons/scalable/places/user-trash-symbolic.svg</file>
+    <file compressed="true" alias="elementary/banana.css">elementary/banana.css</file>
+    <file compressed="true" alias="elementary/banana-dark.css">elementary/banana-dark.css</file>
+    <file compressed="true" alias="elementary/blueberry.css">elementary/blueberry.css</file>
+    <file compressed="true" alias="elementary/blueberry-dark.css">elementary/blueberry-dark.css</file>
+    <file compressed="true" alias="elementary/bubblegum.css">elementary/bubblegum.css</file>
+    <file compressed="true" alias="elementary/bubblegum-dark.css">elementary/bubblegum-dark.css</file>
+    <file compressed="true" alias="elementary/cocoa.css">elementary/cocoa.css</file>
+    <file compressed="true" alias="elementary/cocoa-dark.css">elementary/cocoa-dark.css</file>
+    <file compressed="true" alias="elementary/grape.css">elementary/grape.css</file>
+    <file compressed="true" alias="elementary/grape-dark.css">elementary/grape-dark.css</file>
+    <file compressed="true" alias="elementary/latte.css">elementary/latte.css</file>
+    <file compressed="true" alias="elementary/latte-dark.css">elementary/latte-dark.css</file>
+    <file compressed="true" alias="elementary/lime.css">elementary/lime.css</file>
+    <file compressed="true" alias="elementary/lime-dark.css">elementary/lime-dark.css</file>
+    <file compressed="true" alias="elementary/mint.css">elementary/mint.css</file>
+    <file compressed="true" alias="elementary/mint-dark.css">elementary/mint-dark.css</file>
+    <file compressed="true" alias="elementary/orange.css">elementary/orange.css</file>
+    <file compressed="true" alias="elementary/orange-dark.css">elementary/orange-dark.css</file>
+    <file compressed="true" alias="elementary/slate.css">elementary/slate.css</file>
+    <file compressed="true" alias="elementary/slate-dark.css">elementary/slate-dark.css</file>
+    <file compressed="true" alias="elementary/strawberry.css">elementary/strawberry.css</file>
+    <file compressed="true" alias="elementary/strawberry-dark.css">elementary/strawberry-dark.css</file>
+  </gresource>
+</gresources>

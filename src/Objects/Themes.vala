@@ -2,14 +2,15 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*************************************************/
 /**
 * A register of all themes we have
 */
-public enum Jorts.Themes {
+public enum CargoWrite.Themes {
     BLUEBERRY,
     MINT,
     LIME,
@@ -40,14 +41,14 @@ public enum Jorts.Themes {
             case COCOA:         return "COCOA";
             case SLATE:         return "SLATE";
             case LATTE:         return "LATTE";
-            case IDK:           return (Jorts.Themes.random_theme (NoteData.latest_theme)).to_string ();
+            case IDK:           return (CargoWrite.Themes.random_theme (NoteData.latest_theme)).to_string ();
             default: return "BLUEBERRY";
         }
     }
 
     /*************************************************/
     /**
-    * for use to pinpoint to the correct elementary stylesheet
+    * for use to pinpoint the correct CSS class for the app theme
     */
     public string to_css_class () {
         return this.to_string ().ascii_down ();
@@ -59,7 +60,7 @@ public enum Jorts.Themes {
     */
     public string to_nicename () {
         switch (this) {
-            ///TRANSLATORS: These are the names of the elementary OS colours
+            ///TRANSLATORS: These are the names of the note colors
             case BLUEBERRY:     return _("Blueberry");
             case MINT:          return _("Mint");
             case LIME:          return _("Lime");
@@ -97,9 +98,9 @@ public enum Jorts.Themes {
     * Used for new notes without data. Optionally allows to skip one
     * This avoids generating notes "randomly" with the same themes, which would be boring
     */
-    public static Jorts.Themes random_theme (Jorts.Themes? skip_theme = null) {
-        Gee.ArrayList<Jorts.Themes> themes = new Gee.ArrayList<Jorts.Themes> ();
-        themes.add_all_array (Jorts.Themes.all ());
+    public static CargoWrite.Themes random_theme (CargoWrite.Themes? skip_theme = null) {
+        Gee.ArrayList<CargoWrite.Themes> themes = new Gee.ArrayList<CargoWrite.Themes> ();
+        themes.add_all_array (CargoWrite.Themes.all ());
 
         if (skip_theme != null) {
             themes.remove (skip_theme);

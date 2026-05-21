@@ -3,12 +3,13 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * Switch and its explanatory text
 */
-public class Jorts.SettingsSwitch : Gtk.Box {
+public class CargoWrite.SettingsSwitch : Gtk.Box {
 
     public SettingsSwitch (string name, string explanation, string key) {
         orientation = Gtk.Orientation.HORIZONTAL;

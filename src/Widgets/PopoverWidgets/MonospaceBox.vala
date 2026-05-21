@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
@@ -10,7 +11,7 @@
 * Allows user to switch between normal and monospace font
 * Exposes bool monospace, also sends it via signal
 */
-public class Jorts.MonospaceBox : Gtk.Box {
+public class CargoWrite.MonospaceBox : Gtk.Box {
 
     private Gtk.ToggleButton mono_monospace_toggle;
 

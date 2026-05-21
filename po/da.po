@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -358,12 +358,12 @@ msgstr ""
 "Hav en god dag!🎇\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Fjern Jorts fra systemets autostart"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Fjern Cargo Write fra systemets autostart"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Indstil Jorts til at starte med computeren"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Indstil Cargo Write til at starte med computeren"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -411,7 +411,7 @@ msgid "Disable"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
+msgid "Automatically start Cargo Write"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:134
@@ -432,16 +432,16 @@ msgstr "Luk indstillinger"
 
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
-msgid " - Jorts"
-msgstr " - Jorts"
+msgid " - Cargo Write"
+msgstr " - Cargo Write"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-msgid "Preferences for your Jorts"
-msgstr "Præferencer for dine Jorts"
+msgid "Preferences for Cargo Write"
+msgstr "Præferencer for dine Cargo Write"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
@@ -489,11 +489,11 @@ msgstr "Vis præferencer"
 #~ msgstr "Tilladelser"
 
 #~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "You can set the sticky notes to appear when you log in by adding Cargo Write to "
 #~ "autostart"
 #~ msgstr ""
 #~ "Du kan indstille klistermærkerne til at blive vist, når du logger ind, "
-#~ "ved at tilføje Jorts til autostart"
+#~ "ved at tilføje Cargo Write til autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"

@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -358,12 +358,12 @@ msgstr ""
 "Fijne dag!\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Jorts verwijderen uit autostart"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Cargo Write verwijderen uit autostart"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Stel Jorts in om te starten met de computer"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Stel Cargo Write in om te starten met de computer"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -411,7 +411,7 @@ msgid "Disable"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
+msgid "Automatically start Cargo Write"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:134
@@ -432,7 +432,7 @@ msgstr "Voorkeuren sluiten"
 
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
-msgid " - Jorts"
+msgid " - Cargo Write"
 msgstr " - Korte broek"
 
 #. ******************************************
@@ -441,7 +441,7 @@ msgstr " - Korte broek"
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
 #, fuzzy
-msgid "Preferences for your Jorts"
+msgid "Preferences for Cargo Write"
 msgstr "Voorkeuren voor alle plaknotities"
 
 #: src/Windows/PreferenceWindow.vala:35
@@ -493,11 +493,11 @@ msgstr "Voorkeuren tonen"
 #~ msgstr "Rechten"
 
 #~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "You can set the sticky notes to appear when you log in by adding Cargo Write to "
 #~ "autostart"
 #~ msgstr ""
 #~ "U kunt instellen dat de sticky notes verschijnen wanneer u inlogt door "
-#~ "Jorts toe te voegen aan autostart"
+#~ "Cargo Write toe te voegen aan autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"

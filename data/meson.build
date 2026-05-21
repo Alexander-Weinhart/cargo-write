@@ -1,6 +1,6 @@
 #======== SETTINGS ========
 install_data (
-    'jorts.gschema.xml',
+    'io.github.cargowrite.CargoWrite.gschema.xml',
     install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
     rename: meson.project_name() + '.gschema.xml'
 )
@@ -11,7 +11,7 @@ if not windows_build
     #======== Internationalization ========
     #Translate and install our .desktop file
     i18n.merge_file(
-        input: 'jorts.desktop.in',
+        input: 'cargo-write.desktop.in',
         output: meson.project_name() + '.desktop',
         po_dir: meson.project_source_root() / 'po' / 'extra',
         type: 'desktop',
@@ -22,7 +22,7 @@ if not windows_build
     #======== Metainfo ========
     #Translate and install our .metainfo file
     i18n.merge_file(
-        input: 'jorts.metainfo.xml.in',
+        input: 'cargo-write.metainfo.xml.in',
         output: meson.project_name() + '.metainfo.xml',
         po_dir: meson.project_source_root() / 'po' / 'extra',
         install: true,
@@ -54,4 +54,3 @@ if not windows_build
     )
 
 endif
-

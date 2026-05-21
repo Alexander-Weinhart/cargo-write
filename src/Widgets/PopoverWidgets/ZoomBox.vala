@@ -3,14 +3,15 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
  /**
 * Horizontal box with a +, label, and -, representing zoom controls
 * Gives off zoom_changed signal to tell the user has clicked one of three
-* The signal transmits a Jorts.Zoomkind Enum
+* The signal transmits a CargoWrite.Zoomkind Enum
 */
-public class Jorts.ZoomBox : Gtk.Box {
+public class CargoWrite.ZoomBox : Gtk.Box {
 
     private Gtk.Button zoom_default_button;
     private int _zoom = 100;
@@ -26,7 +27,7 @@ public class Jorts.ZoomBox : Gtk.Box {
         }
     }
 
-    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
+    public signal void zoom_changed (CargoWrite.Zoomkind zoomkind);
 
     construct {
         orientation = Gtk.Orientation.HORIZONTAL;

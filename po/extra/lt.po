@@ -12,15 +12,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/jorts.desktop.in:5
-msgid "Jorts"
+#: data/cargo-write.desktop.in:5
+msgid "Cargo Write"
 msgstr "Šortai"
 
-#: data/jorts.desktop.in:6 data/jorts.metainfo.xml.in:43
+#: data/cargo-write.desktop.in:6 data/cargo-write.metainfo.xml.in:43
 msgid "Sticky notes"
 msgstr "Lipnūs užrašai"
 
-#: data/jorts.desktop.in:7
+#: data/cargo-write.desktop.in:7
 msgid ""
 "Write down notes, reminders, random thoughts and other short-term "
 "informations"
@@ -28,59 +28,54 @@ msgstr ""
 "Užsirašykite pastabas, priminimus, atsitiktines mintis ir kitą trumpalaikę "
 "informaciją"
 
-#: data/jorts.desktop.in:13
+#: data/cargo-write.desktop.in:13
 msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 msgstr ""
 "tekstas;paprastas;paprastas tekstas;užrašų knygutė;užrašai;lipnus;post-it;"
 
-#: data/jorts.desktop.in:18
+#: data/cargo-write.desktop.in:18
 msgid "New sticky note"
 msgstr "Naujas lipnus lapelis"
 
-#: data/jorts.desktop.in:23
+#: data/cargo-write.desktop.in:23
 #, fuzzy
 msgid "Show Preferences"
 msgstr "Nustatymai"
 
-#: data/jorts.metainfo.xml.in:8
+#: data/cargo-write.metainfo.xml.in:8
 msgid "Write on colourful little squares"
 msgstr "Rašykite ant spalvotų kvadratėlių"
 
-#: data/jorts.metainfo.xml.in:10
-#, fuzzy
-msgid "Neither jeans nor shorts, just like jorts!"
-msgstr "Nei džinsai, nei šortai, kaip ir šortai"
-
-#: data/jorts.metainfo.xml.in:11
+#: data/cargo-write.metainfo.xml.in:11
 msgid "Features include:"
 msgstr "Funkcijos:"
 
-#: data/jorts.metainfo.xml.in:13
+#: data/cargo-write.metainfo.xml.in:13
 #, fuzzy
 msgid "Colourful: Ten pretty themes. Any new note gets a random one"
 msgstr ""
 "Spalvos: Dešimt gražių temų. Bet kokiam naujam užrašui suteikiama atsitiktinė"
 
-#: data/jorts.metainfo.xml.in:14
+#: data/cargo-write.metainfo.xml.in:14
 msgid "Adaptive: New notes get the zoom you last chose"
 msgstr ""
 "Prisitaikantis: Naujos pastabos gauna paskutinį kartą pasirinktą priartinimą"
 
-#: data/jorts.metainfo.xml.in:15
+#: data/cargo-write.metainfo.xml.in:15
 msgid "Cute: Each new note has a funny or cute random (editable) title"
 msgstr ""
 "Mielos: Kiekviena nauja pastaba turi juokingą arba mielą atsitiktinį "
 "(redaguojamą) pavadinimą."
 
-#: data/jorts.metainfo.xml.in:16
+#: data/cargo-write.metainfo.xml.in:16
 msgid "Handy: You can open links and emails with Ctrl+Click"
 msgstr "Patogu: Nuorodas ir el. laiškus galite atidaryti naudodami Ctrl+Click"
 
-#: data/jorts.metainfo.xml.in:17
+#: data/cargo-write.metainfo.xml.in:17
 msgid "Private: Try the scribble mode!"
 msgstr "Privatus: Išbandykite braižymo režimą!"
 
-#: data/jorts.metainfo.xml.in:19
+#: data/cargo-write.metainfo.xml.in:19
 #, fuzzy
 msgid ""
 "This is a fork of an old version of \"Notejot\" by lainsce. The community "
@@ -90,57 +85,57 @@ msgstr ""
 "nebūtų be jos darbo. Bendruomenei ji taip patiko, kad pagalvojome, jog būtų "
 "puiku ją atgaivinti!"
 
-#: data/jorts.metainfo.xml.in:27
+#: data/cargo-write.metainfo.xml.in:27
 msgid "Lainsce + Stella"
 msgstr "Lainsce + Stella"
 
-#: data/jorts.metainfo.xml.in:44
+#: data/cargo-write.metainfo.xml.in:44
 #, fuzzy
 msgid "Sticky note"
 msgstr "Lipnūs užrašai"
 
-#: data/jorts.metainfo.xml.in:45
+#: data/cargo-write.metainfo.xml.in:45
 #, fuzzy
 msgid "Stickies"
 msgstr "Lipnūs užrašai"
 
-#: data/jorts.metainfo.xml.in:46
+#: data/cargo-write.metainfo.xml.in:46
 msgid "Colourful"
 msgstr "Spalvingas"
 
-#: data/jorts.metainfo.xml.in:47
+#: data/cargo-write.metainfo.xml.in:47
 msgid "Notes"
 msgstr "Pastabos"
 
-#: data/jorts.metainfo.xml.in:48
+#: data/cargo-write.metainfo.xml.in:48
 msgid "Cute"
 msgstr "Mielas"
 
-#: data/jorts.metainfo.xml.in:49
+#: data/cargo-write.metainfo.xml.in:49
 msgid "Desktop"
 msgstr "Stalinis kompiuteris"
 
-#: data/jorts.metainfo.xml.in:50
+#: data/cargo-write.metainfo.xml.in:50
 msgid "Reminder"
 msgstr "Priminimas"
 
-#: data/jorts.metainfo.xml.in:51
+#: data/cargo-write.metainfo.xml.in:51
 msgid "Utility"
 msgstr "Komunalinės paslaugos"
 
-#: data/jorts.metainfo.xml.in:52
+#: data/cargo-write.metainfo.xml.in:52
 msgid "Pantheon"
 msgstr "Panteonas"
 
-#: data/jorts.metainfo.xml.in:53
+#: data/cargo-write.metainfo.xml.in:53
 msgid "elementary OS"
 msgstr "elementari OS"
 
-#: data/jorts.metainfo.xml.in:71
+#: data/cargo-write.metainfo.xml.in:71
 msgid "A sticky note with the \"Blueberry\" theme"
 msgstr "Lipnus lapelis \"Mėlynių\" tema"
 
-#: data/jorts.metainfo.xml.in:75
+#: data/cargo-write.metainfo.xml.in:75
 msgid ""
 "Streaming? Worried of someone looking above your shoulder? Try the scribbly "
 "Mode!"
@@ -148,98 +143,98 @@ msgstr ""
 "Srautinė transliacija? Nerimaujate, kad kas nors žvelgia per petį? "
 "Išbandykite skrajučių režimą!"
 
-#: data/jorts.metainfo.xml.in:79
+#: data/cargo-write.metainfo.xml.in:79
 msgid "Look! Ascii art in a sticky note!"
 msgstr "Žiūrėkite! Ascii menas lipniame lapelyje!"
 
-#: data/jorts.metainfo.xml.in:83
+#: data/cargo-write.metainfo.xml.in:83
 msgid "The preferences dialog in light mode"
 msgstr "Nustatymų dialogo langas šviesos režimu"
 
-#: data/jorts.metainfo.xml.in:87
+#: data/cargo-write.metainfo.xml.in:87
 msgid "The preferences dialog in dark mode"
 msgstr "Nustatymų dialogo langas tamsiuoju režimu"
 
-#: data/jorts.metainfo.xml.in:95
+#: data/cargo-write.metainfo.xml.in:95
 #, fuzzy
-msgid "🚀 4.0.0 Jorts of Hyperspace!"
+msgid "🚀 4.0.0 Launch Update"
 msgstr "2.2.0 Šviesos šortai"
 
-#: data/jorts.metainfo.xml.in:97
+#: data/cargo-write.metainfo.xml.in:97
 msgid "Version 4 to align with Gtk version"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:98
+#: data/cargo-write.metainfo.xml.in:98
 msgid "Added button to toggle lists, and ability to customize them"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:99
+#: data/cargo-write.metainfo.xml.in:99
 msgid "Ctrl+Scroll to zoom-in, zoom-out"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:100
+#: data/cargo-write.metainfo.xml.in:100
 msgid "More zoom options"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:101
+#: data/cargo-write.metainfo.xml.in:101
 msgid "Keyboard shortcuts work from popover now"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:102
+#: data/cargo-write.metainfo.xml.in:102
 msgid "A couple visual bugfixes as well!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:103
+#: data/cargo-write.metainfo.xml.in:103
 msgid "Various under the hood performance improvements"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:105 data/jorts.metainfo.xml.in:140
-#: data/jorts.metainfo.xml.in:180
+#: data/cargo-write.metainfo.xml.in:105 data/cargo-write.metainfo.xml.in:140
+#: data/cargo-write.metainfo.xml.in:180
 msgid "😎 Guests stars:"
 msgstr "😎 Svečių žvaigždutės:"
 
-#: data/jorts.metainfo.xml.in:107
+#: data/cargo-write.metainfo.xml.in:107
 #, fuzzy
 msgid "Updated JA translation thanks to @ryonakano!"
 msgstr "Atnaujinti vertimai"
 
-#: data/jorts.metainfo.xml.in:108
+#: data/cargo-write.metainfo.xml.in:108
 msgid "You, the user, for liking this lil app!"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:120
+#: data/cargo-write.metainfo.xml.in:120
 msgid "Added windows build. It doesnt need admin rights. Mostly works."
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:125
+#: data/cargo-write.metainfo.xml.in:125
 msgid "No fun allowed: revert back to default style"
 msgstr ""
 
-#: data/jorts.metainfo.xml.in:130
+#: data/cargo-write.metainfo.xml.in:130
 #, fuzzy
-msgid "🕷️ 3.4.0 Scary Jorts of Boo"
+msgid "🕷️ 3.4.0 Autumn Update"
 msgstr "2.2.0 Šviesos šortai"
 
-#: data/jorts.metainfo.xml.in:132
+#: data/cargo-write.metainfo.xml.in:132
 msgid "Some UI elements show up after being shown, for a sleek vibe"
 msgstr ""
 "Kai kurie vartotojo sąsajos elementai rodomi po to, kai yra rodomi, kad būtų "
 "sukurta elegantiška atmosfera."
 
-#: data/jorts.metainfo.xml.in:133
+#: data/cargo-write.metainfo.xml.in:133
 msgid "Ctrl+L to focus note title"
 msgstr "Ctrl+L, kad sufokusuotumėte pastabos pavadinimą"
 
-#: data/jorts.metainfo.xml.in:134
+#: data/cargo-write.metainfo.xml.in:134
 #, fuzzy
 msgid "Ctrl+G (For Gear) or Ctrl+O (for Open) to open note settings now"
 msgstr "Ctrl+M, kad atidarytumėte pastabų nustatymus dabar"
 
-#: data/jorts.metainfo.xml.in:135
+#: data/cargo-write.metainfo.xml.in:135
 msgid "Alt+Number to change theme quickly"
 msgstr "Alt+Number, kad greitai pakeistumėte temą"
 
-#: data/jorts.metainfo.xml.in:136
+#: data/cargo-write.metainfo.xml.in:136
 #, fuzzy
 msgid ""
 "New note setting: Monospace (Ctrl+M). Could be for accessibility, could be "
@@ -248,7 +243,7 @@ msgstr ""
 "Naujas pastabų nustatymas: Monospace. Gali būti dėl prieinamumo, gali būti "
 "dėl ascii piešinių."
 
-#: data/jorts.metainfo.xml.in:137
+#: data/cargo-write.metainfo.xml.in:137
 msgid ""
 "Cleaner, nicer code under the hood. Probably marginally enhanced "
 "performances or less edge bugs"
@@ -256,28 +251,28 @@ msgstr ""
 "Švaresnis ir gražesnis kodas po gaubtu. Tikriausiai nežymiai pagerintas "
 "veikimas arba mažiau kraštinių klaidų"
 
-#: data/jorts.metainfo.xml.in:138
+#: data/cargo-write.metainfo.xml.in:138
 msgid "Added a reset-settings commandline option. Could be handy."
 msgstr ""
 "Pridėta komandinės eilutės parinktis \"Reset-settings\". Gali būti patogu."
 
-#: data/jorts.metainfo.xml.in:142
+#: data/cargo-write.metainfo.xml.in:142
 msgid "@wpkelso strikes again with an amazing special edition icon!"
 msgstr "@wpkelso vėl smogia su nuostabia specialaus leidimo piktograma!"
 
-#: data/jorts.metainfo.xml.in:149
+#: data/cargo-write.metainfo.xml.in:149
 msgid ""
-"Bugfix: Fix Jorts lingering in the background not opening anymore if all "
-"windows were closed (#77)"
+"Bugfix: Fix Cargo Write lingering in the background not opening anymore if "
+"all windows were closed (#77)"
 msgstr ""
-"Klaidų taisymas: ištaisyta fone išliekanti \"Jorts\" funkcija, kuri "
+"Klaidų taisymas: ištaisyta fone išliekanti \"Cargo Write\" funkcija, kuri "
 "nebeatsidaro, jei visi langai buvo uždaryti (#77)"
 
-#: data/jorts.metainfo.xml.in:155
-msgid "3.3.0 Star Platinum Jorts"
-msgstr "3.3.0 \"Star Platinum Jorts"
+#: data/cargo-write.metainfo.xml.in:155
+msgid "3.3.0 Interface Update"
+msgstr "3.3.0 \"Star Platinum Cargo Write"
 
-#: data/jorts.metainfo.xml.in:157
+#: data/cargo-write.metainfo.xml.in:157
 msgid ""
 "Bugfix: Whole window being grabbable interfered with text editing. Only "
 "actionbar and header are, now (#75, #76)"
@@ -285,24 +280,24 @@ msgstr ""
 "Klaidų taisymas: Viso lango patraukimas trukdė redaguoti tekstą. Dabar taip "
 "veikia tik veiksmų juosta ir antraštė (#75, #76)"
 
-#: data/jorts.metainfo.xml.in:158
+#: data/cargo-write.metainfo.xml.in:158
 msgid "Added more random titles"
 msgstr "Pridėta daugiau atsitiktinių pavadinimų"
 
-#: data/jorts.metainfo.xml.in:159
+#: data/cargo-write.metainfo.xml.in:159
 msgid "Buttons for add/remove autostart"
 msgstr "Mygtukai pridėti / pašalinti automatinio paleidimo funkciją"
 
-#: data/jorts.metainfo.xml.in:160
+#: data/cargo-write.metainfo.xml.in:160
 msgid "Some more title placeholders"
 msgstr "Dar keletas pavadinimų pakaitinių pavadinimų"
 
-#: data/jorts.metainfo.xml.in:161
+#: data/cargo-write.metainfo.xml.in:161
 #, fuzzy
 msgid "Under the hood is a bit cleaner now"
 msgstr "Pakeitimai po gaubtu, kad kodas būtų švaresnis"
 
-#: data/jorts.metainfo.xml.in:167
+#: data/cargo-write.metainfo.xml.in:167
 msgid ""
 "Bugfix: When toggled off, the actionbar would leave an empty space. It is "
 "now fixed - With now a flashier animation to boot."
@@ -310,26 +305,26 @@ msgstr ""
 "Klaidų taisymas: išjungus veiksmų juostą, veiksmų juostoje likdavo tuščia "
 "vieta. Dabar tai ištaisyta."
 
-#: data/jorts.metainfo.xml.in:172
+#: data/cargo-write.metainfo.xml.in:172
 #, fuzzy
-msgid "🌈 3.2.0 Jorts of Resilience and Love"
+msgid "🌈 3.2.0 Pride Update"
 msgstr "2.2.0 Šviesos šortai"
 
-#: data/jorts.metainfo.xml.in:174
+#: data/cargo-write.metainfo.xml.in:174
 msgid "Add a cool little animation when enabling/disabling actionbar"
 msgstr "Įjungiant/išjungiant veiksmų juostą pridėti šaunią animaciją"
 
-#: data/jorts.metainfo.xml.in:175
+#: data/cargo-write.metainfo.xml.in:175
 #, fuzzy
 msgid "Fixed blurrinness in high-scaled display"
 msgstr ""
 "Ištaisytas dėl \"Flathub BS\" atsiradęs didelio mastelio ekrano neryškumas"
 
-#: data/jorts.metainfo.xml.in:176
+#: data/cargo-write.metainfo.xml.in:176
 msgid "Added high-resolution screenshots"
 msgstr "Pridėta didelės skiriamosios gebos ekrano nuotraukų"
 
-#: data/jorts.metainfo.xml.in:177
+#: data/cargo-write.metainfo.xml.in:177
 msgid ""
 "Last minute bugfix, somehow accels did not work when the Preferences were "
 "focused"
@@ -337,16 +332,16 @@ msgstr ""
 "Paskutinės minutės klaidos taisymas, kažkodėl accels neveikė, kai buvo "
 "sukoncentruotos Nustatymai"
 
-#: data/jorts.metainfo.xml.in:178
+#: data/cargo-write.metainfo.xml.in:178
 msgid "A bit of housekeeping for FR and DE while at it"
 msgstr "Šiek tiek tvarkymosi FR ir DE, o tuo tarpu"
 
-#: data/jorts.metainfo.xml.in:182
+#: data/cargo-write.metainfo.xml.in:182
 #, fuzzy
 msgid "A lovely temporary icon by @wpkelso"
 msgstr "Pride Edition: @wpkelso sukurta miela laikina ikona"
 
-#: data/jorts.metainfo.xml.in:183
+#: data/cargo-write.metainfo.xml.in:183
 #, fuzzy
 msgid "Updated EL translations thanks to @OrionasKakomoiroglou!"
 msgstr "Atnaujinti vertimai"

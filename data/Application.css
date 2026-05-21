@@ -1,6 +1,7 @@
 /*
 * Copyright (c) 2017-2024 Lains
 * Copyright (c) 2025 Stella (teamcons on GitHub) and the Ellie_Commons community
+* Copyright (c) 2026 Alexander Weinhart
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -59,9 +60,80 @@ actionbar {
     border: none;
 }
 
-/* White relief in actionbar icons */
 actionbar image {
-    -gtk-icon-shadow: 0px 1px rgba(255,255,255,0.5);
+    -gtk-icon-shadow: none;
+}
+
+actionbar button,
+actionbar menubutton,
+actionbar button image,
+actionbar menubutton image,
+actionbar button label,
+actionbar menubutton label {
+    color: inherit;
+}
+
+actionbar .action-new {
+    color: alpha(@fg_color, 0.95);
+}
+
+actionbar .action-delete {
+    color: alpha(@fg_color, 0.82);
+}
+
+actionbar .action-list {
+    color: alpha(@fg_color, 0.88);
+}
+
+actionbar .action-emoji {
+    color: alpha(@fg_color, 0.76);
+}
+
+actionbar .action-menu {
+    color: alpha(@fg_color, 1);
+}
+
+actionbar .action-emoji,
+actionbar .action-emoji:hover,
+actionbar .action-emoji:focus,
+actionbar .action-emoji:active,
+actionbar .action-emoji:checked {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    -gtk-icon-shadow: none;
+}
+
+actionbar .action-emoji image,
+actionbar .action-emoji:hover image,
+actionbar .action-emoji:focus image,
+actionbar .action-emoji:active image,
+actionbar .action-emoji:checked image {
+    color: alpha(@fg_color, 0.76);
+    -gtk-icon-shadow: none;
+}
+
+actionbar .action-emoji > button,
+actionbar .action-emoji:hover > button,
+actionbar .action-emoji:focus > button,
+actionbar .action-emoji:active > button,
+actionbar .action-emoji:checked > button {
+    color: alpha(@fg_color, 0.76);
+    -gtk-icon-shadow: none;
+}
+
+actionbar .action-emoji > button > box,
+actionbar .action-emoji:hover > button > box,
+actionbar .action-emoji:focus > button > box,
+actionbar .action-emoji:active > button > box,
+actionbar .action-emoji:checked > button > box,
+actionbar .action-emoji > button > box > image,
+actionbar .action-emoji:hover > button > box > image,
+actionbar .action-emoji:focus > button > box > image,
+actionbar .action-emoji:active > button > box > image,
+actionbar .action-emoji:checked > button > box > image {
+    color: alpha(@fg_color, 0.76);
+    -gtk-icon-shadow: none;
 }
 
 actionbar .themedbutton:hover,

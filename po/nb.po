@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -358,12 +358,12 @@ msgstr ""
 "Ha en flott dag 🎇\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Fjern Jorts fra systemets autostart"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Fjern Cargo Write fra systemets autostart"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Sett Jorts til å starte med datamaskinen"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Sett Cargo Write til å starte med datamaskinen"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -410,7 +410,7 @@ msgid "Disable"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
+msgid "Automatically start Cargo Write"
 msgstr ""
 
 #: src/Views/PreferencesView.vala:134
@@ -432,8 +432,8 @@ msgstr "Lukk preferanser"
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
 #, fuzzy
-msgid " - Jorts"
-msgstr "Jorts"
+msgid " - Cargo Write"
+msgstr "Cargo Write"
 
 #. ******************************************
 #. HEADERBAR BS
@@ -441,7 +441,7 @@ msgstr "Jorts"
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
 #, fuzzy
-msgid "Preferences for your Jorts"
+msgid "Preferences for Cargo Write"
 msgstr "Innstillinger for denne klistrelappen"
 
 #: src/Windows/PreferenceWindow.vala:35
@@ -489,11 +489,11 @@ msgstr "Vis preferanser"
 #~ msgstr "Tillatelser"
 
 #~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "You can set the sticky notes to appear when you log in by adding Cargo Write to "
 #~ "autostart"
 #~ msgstr ""
 #~ "Du kan angi at klistrelappene skal vises når du logger på ved å legge til "
-#~ "Jorts i autostart"
+#~ "Cargo Write i autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"
@@ -539,8 +539,8 @@ msgstr "Vis preferanser"
 #~ msgid "text;plain;plaintext;notepad;notes;sticky;post-it;"
 #~ msgstr "tekst;ren;rentekst;notisblokk;notater;klistrelapper;post-it;"
 
-#~ msgid "Neither jeans nor shorts, just like jorts"
-#~ msgstr "Verken jeans eller shorts, akkurat som jorts"
+#~ msgid "Neither jeans nor shorts, just like cargo write"
+#~ msgstr "Verken jeans eller shorts, akkurat som cargo write"
 
 #~ msgid "Colourful little sticky notes for all of your thoughts :)"
 #~ msgstr "Fargerike små klistrelapper for alle tankene dine :)"
@@ -607,8 +607,8 @@ msgstr "Vis preferanser"
 #~ msgid "You can unzoom so hard you could do ascii art"
 #~ msgstr "Du kan zoome ut så hardt at du kan lage ascii-kunst"
 
-#~ msgid "2.2.0 The Jorts of light"
-#~ msgstr "2.2.0 Lysets Jorts"
+#~ msgid "2.2.0 Cargo Write of light"
+#~ msgstr "2.2.0 Cargo Write of Light"
 
 #~ msgid "Better translation coverage"
 #~ msgstr "Bedre dekning av oversettelser"
@@ -631,16 +631,16 @@ msgstr "Vis preferanser"
 #~ "Knappen i verktøylinjen viser en tilfeldig emote hver gang du klikker!"
 
 #~ msgid ""
-#~ "New feature: Jorts does a monthly backup. Should there be any issue you "
+#~ "New feature: Cargo Write does a monthly backup. Should there be any issue you "
 #~ "can recover data!"
 #~ msgstr ""
-#~ "Ny funksjon: Jorts tar en månedlig sikkerhetskopi. Skulle det oppstå "
+#~ "Ny funksjon: Cargo Write tar en månedlig sikkerhetskopi. Skulle det oppstå "
 #~ "problemer, kan du gjenopprette data!"
 
 #~ msgid ""
-#~ "Should the main storage be corrupted, Jorts tries to load from backup"
+#~ "Should the main storage be corrupted, Cargo Write tries to load from backup"
 #~ msgstr ""
-#~ "Hvis hovedlageret blir ødelagt, prøver Jorts å laste inn fra "
+#~ "Hvis hovedlageret blir ødelagt, prøver Cargo Write å laste inn fra "
 #~ "sikkerhetskopien"
 
 #~ msgid "Some new fun/cute default titles"
@@ -649,7 +649,7 @@ msgstr "Vis preferanser"
 #~ msgid "Under the hood changes here and there for cleaner code"
 #~ msgstr "Endringer under panseret her og der for renere kode"
 
-#~ msgid "2.1.2 The unrippable jorts"
+#~ msgid "2.1.2 The unrippable cargo write"
 #~ msgstr "2.1.2 De uoppnåelige jortene"
 
 #~ msgid "Add relief to actionbar buttons"
@@ -710,8 +710,8 @@ msgstr "Vis preferanser"
 #~ msgid "Better shortcut and tooltips"
 #~ msgstr "Bedre snarveier og verktøytips"
 
-#~ msgid "Fixed a bug where Jorts stayed on light system theme"
-#~ msgstr "Fikset en feil der Jorts ble værende på det lyse systemtemaet"
+#~ msgid "Fixed a bug where Cargo Write stayed on light system theme"
+#~ msgstr "Fikset en feil der Cargo Write ble værende på det lyse systemtemaet"
 
 #~ msgid "2.0.1 Appcenter release"
 #~ msgstr "2.0.1 Appcenter-utgivelse"
@@ -722,8 +722,8 @@ msgstr "Vis preferanser"
 #~ msgid "Revival of an ancient but well loved version of Notejot"
 #~ msgstr "Gjenopplivning av en gammel, men elsket versjon av Notejot"
 
-#~ msgid "The app is now named Jorts. You however cannot wear it"
-#~ msgstr "Appen heter nå Jorts. Du kan imidlertid ikke bruke den"
+#~ msgid "The app is now named Cargo Write."
+#~ msgstr "Appen heter nå Cargo Write. Du kan imidlertid ikke bruke den"
 
 #~ msgid "10 lovely little colours"
 #~ msgstr "10 herlige små farger"

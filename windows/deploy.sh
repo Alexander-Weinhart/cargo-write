@@ -2,7 +2,7 @@
 
 # Script to go all the way from building to compiling to creating an installer
 # Install MSYS2 then run prep.sh before this to prep your box
-# Very tweaked version of the deploy.sh from SuperCamel: https://github.com/supercamel/ValaOnWindows
+# Very tweaked version of an earlier Vala-on-Windows deploy script
 
 # Run this from base directory, not ./windows
 
@@ -14,15 +14,15 @@
 #--------------------------------
 # Variables.
 # Write path UNIX-style ("/"). Script will invert the slash where relevant.
-app_name="Jorts"
+app_name="Cargo Write"
 build_dir="builddir"
-theme_name="io.elementary.stylesheet.blueberry"
 icon_theme="elementary"
 version="$(cat meson.build | grep version | cut -d \' -f 2)"
-publisher="elly-code"
+publisher="Cargo Write contributors"
+app_id="io.github.cargowrite.CargoWrite"
 
 deploy_dir="windows/deploy"
-exe_name="io.github.elly_code.jorts.exe"
+exe_name="${app_id}.exe"
 
 #--------------------------------
 # Rebuild and compile the exe as a release build
@@ -93,13 +93,12 @@ cp -rnv /mingw64/share/icons/elementary/index.theme ${deploy_dir}/share/icons/el
 gtk4-update-icon-cache.exe -f ${deploy_dir}/share/icons/elementary/
 
 #--------------------------------
-# Write the theme to gtk settings
+# Write Gtk settings
 # The NSIS below handles installing the font, as it works differently on windows
 
 mkdir -v ${deploy_dir}/etc/gtk-4.0/
 cat << EOF > ${deploy_dir}/etc/gtk-4.0/settings.ini
 [Settings]
-gtk-theme-name=${theme_name}
 gtk-icon-theme-name=${icon_theme}
 gtk-font-name=Inter Variable Text 9
 gtk-xft-antialias=1
@@ -113,7 +112,7 @@ glib-compile-schemas ${deploy_dir}/share/glib-2.0/schemas
 #================================================================
 # Create NSIS script
 echo "Creating NSIS script..."
-cat << EOF > windows/${app_name}-Installer.nsi
+cat << EOF > windows/Cargo-Write-Installer.nsi
 !include "MUI2.nsh"
 !include WinMessages.nsh
 
@@ -122,8 +121,8 @@ Name ${app_name}
 VIAddVersionKey /LANG=0 "ProductName" "${app_name}"
 VIAddVersionKey /LANG=0 "FileVersion" "${version}"
 VIAddVersionKey /LANG=0 "ProductVersion" "${version}"
-VIAddVersionKey /LANG=0 "FileDescription" "https://github.com/elly-code/jorts"
-VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3 elly-code"
+VIAddVersionKey /LANG=0 "FileDescription" "Cargo Write"
+VIAddVersionKey /LANG=0 "LegalCopyright" "GNU GPL v3"
 VIProductVersion "${version}.0"
 
 Outfile "${app_name}-Installer.exe"
@@ -134,18 +133,18 @@ RequestExecutionLevel user
 
 # Set the title of the installer window
 Caption "${app_name} Installer"
-BrandingText "Jorts ${version}, ${publisher} 2025"
+BrandingText "Cargo Write ${version}, ${publisher} 2025"
 
 # Set the title and text on the welcome page
 !define MUI_WELCOMEPAGE_TITLE "Welcome to ${app_name} setup"
-!define MUI_WELCOMEPAGE_TEXT "This bitch will guide you through the installation of ${app_name}."
+!define MUI_WELCOMEPAGE_TEXT "This installer will guide you through the installation of ${app_name}."
 !define MUI_INSTFILESPAGE_TEXT "Please wait while ${app_name} is being installed."
 !define MUI_ICON "icons\install.ico"
 !define MUI_UNICON "icons\uninstall.ico"
 
-!define MUI_FINISHPAGE_LINK "Source code and wiki"
-!define MUI_FINISHPAGE_LINK_LOCATION "https://github.com/elly-code/jorts"
-!define MUI_FINISHPAGE_RUN "\$INSTDIR\bin\io.github.elly_code.jorts.exe"
+!define MUI_FINISHPAGE_LINK "Project page"
+!define MUI_FINISHPAGE_LINK_LOCATION "https://appcenter.elementary.io"
+!define MUI_FINISHPAGE_RUN "\$INSTDIR\bin\\${exe_name}"
 
 !insertmacro MUI_PAGE_WELCOME
 !insertmacro MUI_PAGE_DIRECTORY
@@ -242,7 +241,7 @@ Section "Install"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "InstallLocation" "\$INSTDIR\\"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "UninstallString" "\$INSTDIR\\Uninstall.exe"
     WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "Publisher" "${publisher}"
-    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "URLInfoAbout" "https://github.com/elly-code/jorts"
+    WriteRegStr HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "URLInfoAbout" "https://appcenter.elementary.io"
     WriteRegDWORD HKCU "Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\${app_name}" "EstimatedSize" "0x00028294" ;164,5 MB
 SectionEnd
 
@@ -286,4 +285,3 @@ echo "Running NSIS..."
 makensis windows/${app_name}-Installer.nsi
 
 echo "Done"
-

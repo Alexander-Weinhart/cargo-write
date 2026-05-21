@@ -12,3 +12,5 @@ generate_stylesheets.sh
 .editorconfig
 oldpng/
 deploy/
+third_party/elementary-stylesheet/node_modules/
+data/elementary/*.css.map

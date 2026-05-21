@@ -2,10 +2,11 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
- public class Jorts.PreferencesView : Gtk.Box {
+ public class CargoWrite.PreferencesView : Gtk.Box {
     //public Gtk.Button reset_button;
     private Granite.Toast toast;
     public Gtk.Button close_button;
@@ -78,7 +79,7 @@
 
                 debug ("Built UI. Lets do connects and binds");
 
-                var scribbly_box = new Jorts.SettingsSwitch (
+                var scribbly_box = new CargoWrite.SettingsSwitch (
                     _("Scribble mode"),
                     _("Scribble text of unfocused notes (Ctrl+H)"),
                     "scribbly-mode-active");
@@ -90,7 +91,7 @@
                 /*               hidebar Toggle                  */
                 /*************************************************/
 
-                var hidebar_box = new Jorts.SettingsSwitch (
+                var hidebar_box = new CargoWrite.SettingsSwitch (
                     ///TRANSLATORS: Instead of bottom bar you can also use "Action bar" or "button bar"
                     _("Hide bottom bar"),
                     _("Keyboard shortcuts will still function (Ctrl+T)"),
@@ -114,7 +115,7 @@
                 };
 
                 set_autostart.clicked.connect (() => {
-                    Jorts.Utils.autostart_set ();
+                    CargoWrite.Utils.autostart_set ();
                     toast.send_notification ();
                 });
 
@@ -125,7 +126,7 @@
                 };
 
                 remove_autostart.clicked.connect (() => {
-                    Jorts.Utils.autostart_remove ();
+                    CargoWrite.Utils.autostart_remove ();
                     toast.send_notification ();
                 });
 
@@ -134,7 +135,7 @@
 
                 var autostart_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 5);
 
-                var autostart_label = new Granite.HeaderLabel (_("Automatically start Jorts")) {
+                var autostart_label = new Granite.HeaderLabel (_("Automatically start Cargo Write")) {
                     mnemonic_widget = both_buttons,
                     hexpand = true,
                     secondary_text = _("Show your sticky notes when you log in")
@@ -156,7 +157,7 @@
 
             // Monies?
             var support_button = new Gtk.LinkButton.with_label (
-                Jorts.Constants.DONATE_LINK,
+                CargoWrite.Constants.DONATE_LINK,
                 _("Support us!")
             );
             actionbar.start_widget = support_button;

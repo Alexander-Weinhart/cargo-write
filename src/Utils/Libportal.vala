@@ -2,18 +2,19 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
-namespace Jorts.Utils {
+namespace CargoWrite.Utils {
     public void autostart_remove () {
         Xdp.Portal portal = new Xdp.Portal ();
         GenericArray<weak string> cmd = new GenericArray<weak string> ();
-        cmd.add ("io.github.elly_code.jorts");
+        cmd.add ("io.github.cargowrite.CargoWrite");
 
         portal.request_background.begin (
             null,
-            _("Remove Jorts from system autostart"),
+            _("Remove Cargo Write from system autostart"),
             cmd,
             Xdp.BackgroundFlags.NONE,
             null);
@@ -22,11 +23,11 @@ namespace Jorts.Utils {
     public void autostart_set () {
         Xdp.Portal portal = new Xdp.Portal ();
         GenericArray<weak string> cmd = new GenericArray<weak string> ();
-        cmd.add ("io.github.elly_code.jorts");
+        cmd.add ("io.github.cargowrite.CargoWrite");
 
         portal.request_background.begin (
             null,
-            _("Set Jorts to start with the computer"),
+            _("Set Cargo Write to start with the computer"),
             cmd,
             Xdp.BackgroundFlags.AUTOSTART,
             null);

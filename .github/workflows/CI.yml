@@ -24,8 +24,8 @@ jobs:
       - name: Build
         uses: flatpak/flatpak-github-actions/flatpak-builder@v6
         with:
-          bundle: jorts.flatpak
-          manifest-path: io.github.elly_code.jorts.yml
+          bundle: cargo-write.flatpak
+          manifest-path: io.github.cargowrite.CargoWrite.yml
           run-tests: true
           repository-name: appcenter
           repository-url: https://flatpak.elementary.io/repo.flatpakrepo

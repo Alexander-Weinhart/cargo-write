@@ -2,7 +2,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 
@@ -13,15 +14,15 @@
 * Can be packaged into a noteData file for convenient storage
 * Reports to the NoteManager for saving
 */
-public class Jorts.StickyNoteWindow : Gtk.Window {
+public class CargoWrite.StickyNoteWindow : Gtk.Window {
 
-    public Jorts.NoteView view;
+    public CargoWrite.NoteView view;
     public Popover popover;
     public TextView textview;
 
-    private Jorts.ColorController color_controller;
-    public Jorts.ZoomController zoom_controller;
-    private Jorts.ScribblyController scribbly_controller;
+    private CargoWrite.ColorController color_controller;
+    public CargoWrite.ZoomController zoom_controller;
+    private CargoWrite.ScribblyController scribbly_controller;
 
     public NoteData data {
         owned get { return packaged ();}
@@ -58,7 +59,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         { ACTION_TOGGLE_LIST, action_toggle_list},
     };
 
-    public StickyNoteWindow (Jorts.Application app, NoteData data) {
+    public StickyNoteWindow (CargoWrite.Application app, NoteData data) {
         Intl.setlocale ();
         debug ("[STICKY NOTE] New StickyNoteWindow instance!");
         application = app;
@@ -67,9 +68,9 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
-        color_controller = new Jorts.ColorController (this);
-        zoom_controller = new Jorts.ZoomController (this);
-        scribbly_controller = new Jorts.ScribblyController (this);
+        color_controller = new CargoWrite.ColorController (this);
+        zoom_controller = new CargoWrite.ZoomController (this);
+        scribbly_controller = new CargoWrite.ScribblyController (this);
 
         keypress_controller = new Gtk.EventControllerKey ();
         scroll_controller = new Gtk.EventControllerScroll (VERTICAL) {
@@ -80,7 +81,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         ((Gtk.Widget)this).add_controller (scroll_controller);
 
         add_css_class ("rounded");
-        title = "" + _(" - Jorts");
+        title = "" + _(" - Cargo Write");
 
 
         /*****************************************/
@@ -93,7 +94,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
         view = new NoteView ();
         textview = view.textview;
 
-        popover = new Jorts.Popover (this);
+        popover = new CargoWrite.Popover (this);
         view.menu_button.popover = popover;
 
         set_child (view);
@@ -160,7 +161,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     * Simple handler for the EditableLabel
     */
     private void on_editable_changed () {
-        title = view.editablelabel.text + _(" - Jorts");
+        title = view.editablelabel.text + _(" - Cargo Write");
         changed ();
     }
 
@@ -195,7 +196,7 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
 
         set_default_size (data.width, data.height);
         view.editablelabel.text = data.title;
-        title = view.editablelabel.text + _(" - Jorts");
+        title = view.editablelabel.text + _(" - Cargo Write");
         view.textview.buffer.text = data.content;
 
         color_controller.theme = data.theme;
@@ -208,11 +209,68 @@ public class Jorts.StickyNoteWindow : Gtk.Window {
     private void action_focus_title () {view.action_focus_title ();}
     private void action_show_emoji () {view.action_show_emoji ();}
     private void action_show_menu () {view.action_show_menu ();}
-    private void action_delete () {((Jorts.Application)this.application).manager.delete_note (this); this.destroy ();}
+    private void action_delete () {show_delete_confirmation ();}
     private void action_toggle_mono () {popover.monospace = !popover.monospace;}
     private void action_toggle_list () {view.action_toggle_list ();}
 
     private void action_zoom_out () {zoom_controller.zoom_out ();}
     private void action_zoom_default () {zoom_controller.zoom_default ();}
     private void action_zoom_in () {zoom_controller.zoom_in ();}
+
+    private void show_delete_confirmation () {
+        var dialog = new Gtk.Dialog () {
+            transient_for = this,
+            modal = true,
+            title = _("Are you sure?")
+        };
+
+        dialog.add_button (_("No"), Gtk.ResponseType.CANCEL);
+        var yes_button = dialog.add_button (_("Yes"), Gtk.ResponseType.ACCEPT);
+        yes_button.sensitive = false;
+        yes_button.tooltip_text = _("Press Ctrl+Alt+Shift+P to unlock Yes");
+        dialog.set_default_response (Gtk.ResponseType.CANCEL);
+
+        var content = dialog.get_content_area ();
+        content.spacing = 12;
+        content.margin_top = 18;
+        content.margin_bottom = 18;
+        content.margin_start = 18;
+        content.margin_end = 18;
+
+        content.append (new Gtk.Label (_("Delete this sticky note?")) {
+            wrap = true,
+            xalign = 0
+        });
+        content.append (new Gtk.Label (_("Press Ctrl+Alt+Shift+P to unlock Yes.")) {
+            wrap = true,
+            xalign = 0
+        });
+
+        var unlock_controller = new Gtk.EventControllerKey ();
+        unlock_controller.key_pressed.connect ((keyval, keycode, state) => {
+            var required_mods = Gdk.ModifierType.CONTROL_MASK |
+                Gdk.ModifierType.ALT_MASK |
+                Gdk.ModifierType.SHIFT_MASK;
+
+            if ((keyval == Gdk.Key.P || keyval == Gdk.Key.p) &&
+                (state & required_mods) == required_mods) {
+                yes_button.sensitive = true;
+                yes_button.grab_focus ();
+                return Gdk.EVENT_STOP;
+            }
+
+            return Gdk.EVENT_PROPAGATE;
+        });
+        ((Gtk.Widget)dialog).add_controller (unlock_controller);
+
+        dialog.response.connect ((response) => {
+            dialog.close ();
+
+            if (response == Gtk.ResponseType.ACCEPT && yes_button.sensitive) {
+                ((CargoWrite.Application)this.application).manager.delete_note (this);
+            }
+        });
+
+        dialog.present ();
+    }
 }

@@ -1,8 +1,8 @@
-# How to Translate jorts
+# How to Translate Cargo Write
 
 ## First Things First
 
-* Clone this repository by opening the terminal in a folder of your choice and typing ```git clone https://github.com/elly_code/jorts```
+* Clone this repository by opening the terminal in a folder of your choice and typing ```git clone https://github.com/cargowrite/cargo-write```
 
 ## Basics
 
@@ -15,6 +15,6 @@
 
 * Next, in the folder you've cloned this repo in, open a terminal and type: ```git checkout -b "Translation <language code>```
 * Then, type ```git add *```
-* Finally, ```git commit -m "Translated your app for <Language Name>" && git push```, follow the instructions in the terminal if need be, then type your github username and password.
+* Finally, ```git commit -m "Translated your app for <Language Name>" && git push```, follow the instructions in the terminal if needed and authenticate with your Git hosting account when prompted.
 
-And that's it! You've successfully translated jorts for your language!
+And that's it! You've successfully translated Cargo Write for your language!

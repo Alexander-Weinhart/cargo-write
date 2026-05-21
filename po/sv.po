@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: io.github.elly_code.jorts\n"
+"Project-Id-Version: io.github.cargowrite.CargoWrite\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-22 14:18+0100\n"
 "PO-Revision-Date: 2025-11-23 13:27+0100\n"
@@ -354,12 +354,12 @@ msgstr ""
 "Ha en fantastisk dag!🎇\n"
 
 #: src/Utils/Libportal.vala:16
-msgid "Remove Jorts from system autostart"
-msgstr "Ta bort Jorts från systemets autostart"
+msgid "Remove Cargo Write from system autostart"
+msgstr "Ta bort Cargo Write från systemets autostart"
 
 #: src/Utils/Libportal.vala:29
-msgid "Set Jorts to start with the computer"
-msgstr "Ställ in Jorts att starta med datorn"
+msgid "Set Cargo Write to start with the computer"
+msgstr "Ställ in Cargo Write att starta med datorn"
 
 #: src/Views/PreferencesView.vala:23
 msgid "Request to system sent"
@@ -401,8 +401,8 @@ msgid "Disable"
 msgstr "Inaktivera"
 
 #: src/Views/PreferencesView.vala:131
-msgid "Automatically start Jorts"
-msgstr "Starta Jorts automatiskt"
+msgid "Automatically start Cargo Write"
+msgstr "Starta Cargo Write automatiskt"
 
 #: src/Views/PreferencesView.vala:134
 msgid "Show your sticky notes when you log in"
@@ -422,16 +422,16 @@ msgstr "Stäng inställningar"
 
 #: src/Windows/StickyNoteWindow.vala:83 src/Windows/StickyNoteWindow.vala:165
 #: src/Windows/StickyNoteWindow.vala:200 src/Windows/PreferenceWindow.vala:35
-msgid " - Jorts"
-msgstr " - Jorts"
+msgid " - Cargo Write"
+msgstr " - Cargo Write"
 
 #. ******************************************
 #. HEADERBAR BS
 #. ******************************************
 #. / TRANSLATORS: Feel free to improvise. The goal is a playful wording to convey the idea of app-wide settings
 #: src/Windows/PreferenceWindow.vala:33
-msgid "Preferences for your Jorts"
-msgstr "Inställningar för dina Jorts"
+msgid "Preferences for Cargo Write"
+msgstr "Inställningar för dina Cargo Write"
 
 #: src/Windows/PreferenceWindow.vala:35
 msgid "Preferences"
@@ -482,11 +482,11 @@ msgstr "Visa inställningar"
 #~ msgstr "Behörigheter"
 
 #~ msgid ""
-#~ "You can set the sticky notes to appear when you log in by adding Jorts to "
+#~ "You can set the sticky notes to appear when you log in by adding Cargo Write to "
 #~ "autostart"
 #~ msgstr ""
 #~ "Du kan ställa in att anteckningarna ska visas när du loggar in genom att "
-#~ "lägga till Jorts i autostart"
+#~ "lägga till Cargo Write i autostart"
 
 #, fuzzy
 #~ msgid "Autostart apps"

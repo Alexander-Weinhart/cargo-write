@@ -1,8 +1,8 @@
-id: io.github.elly_code.jorts
+id: io.github.cargowrite.CargoWrite
 runtime: io.elementary.Platform
 runtime-version: '8.2'
 sdk: io.elementary.Sdk
-command: io.github.elly_code.jorts
+command: io.github.cargowrite.CargoWrite
 
 finish-args:
   - '--share=ipc'
@@ -45,7 +45,7 @@ modules:
         url: https://raw.githubusercontent.com/christiannaths/redacted-font/284dfb0397d1911c3388f72389f08b3c13446134/README.md
         sha256: e594f7f6bf03f7b11897d219184e215466cdfb9a8268b54cb7d5a626482dd722
 
-  - name: jorts
+  - name: cargo-write
     buildsystem: meson
     config-opts:
       - -Dvariant=['default']

@@ -2,14 +2,15 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
- public class Jorts.NoteView : Gtk.Box {
+ public class CargoWrite.NoteView : Gtk.Box {
     public Gtk.HeaderBar headerbar;
-    public Jorts.EditableLabel editablelabel;
-    public Jorts.TextView textview;
-    public Jorts.ActionBar actionbar;
+    public CargoWrite.EditableLabel editablelabel;
+    public CargoWrite.TextView textview;
+    public CargoWrite.ActionBar actionbar;
 
     public Gtk.MenuButton emoji_button;
     public Gtk.EmojiChooser emojichooser_popover;
@@ -43,15 +44,15 @@
         headerbar.add_css_class ("headertitle");
 
         // Defime the label you can edit. Which is editable.
-        editablelabel = new Jorts.EditableLabel ();
+        editablelabel = new CargoWrite.EditableLabel ();
         headerbar.set_title_widget (editablelabel);
 
-        textview = new Jorts.TextView ();
+        textview = new CargoWrite.TextView ();
         scrolled = new Gtk.ScrolledWindow () {
             child = textview
         };
 
-        actionbar = new Jorts.ActionBar ();
+        actionbar = new CargoWrite.ActionBar ();
         emoji_button = actionbar.emoji_button;
         emojichooser_popover = actionbar.emojichooser_popover;
         menu_button = actionbar.menu_button;
@@ -65,17 +66,10 @@
         /*              CONNECTS AND BINDS                 */
         /***************************************************/
 
-        emojichooser_popover.show.connect (randomize_emote_button);
         emojichooser_popover.emoji_picked.connect (on_emoji_picked);
         //Application.gsettings.bind ("hide-bar", actionbar, "revealed", SettingsBindFlags.INVERT_BOOLEAN);
 
         //textview.bind_property ("on_list_item", actionbar.list_button, "active", GLib.BindingFlags.DEFAULT);
-    }
-
-    // Randomize the button emoji when clicked
-    private void randomize_emote_button () {
-        debug ("Emote requested!");
-        emoji_button.icon_name = Jorts.Utils.random_emote (emoji_button.icon_name);
     }
 
     private void on_emoji_picked (string emoji) {

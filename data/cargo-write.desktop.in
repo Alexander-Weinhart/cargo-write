@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Version=1.5
-Name=Jorts
+Name=Cargo Write
 GenericName=Sticky notes
 Comment=Write down notes, reminders, random thoughts and other short-term informations
-Icon=io.github.elly_code.jorts
-Exec=io.github.elly_code.jorts
+Icon=io.github.cargowrite.CargoWrite
+Exec=io.github.cargowrite.CargoWrite
 Terminal=false
 Actions=NewNote;Preferences;
 Categories=Office;GTK;
@@ -16,9 +16,9 @@ SingleMainWindow=false
 [Desktop Action NewNote]
 Name=New sticky note
 Icon=list-add
-Exec=io.github.elly_code.jorts --new-note
+Exec=io.github.cargowrite.CargoWrite --new-note
 
 [Desktop Action Preferences]
 Name=Show Preferences
 Icon=open-menu
-Exec=io.github.elly_code.jorts --preferences
+Exec=io.github.cargowrite.CargoWrite --preferences

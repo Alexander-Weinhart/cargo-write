@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*
@@ -10,9 +11,9 @@
 /**
 * I just dont wanna rewrite the same button over and over
 */
-public class Jorts.ColorPill : Gtk.CheckButton {
+public class CargoWrite.ColorPill : Gtk.CheckButton {
 
-        public Jorts.Themes color { get; construct; }
+        public CargoWrite.Themes color { get; construct; }
 
         public ColorPill (Themes color, Gtk.CheckButton? group_member = null) {
             Object (

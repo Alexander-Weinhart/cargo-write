@@ -3,17 +3,18 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * The popover menu to tweak individual notes
 * Contains a setting for color, one for monospace font, one for zoom
 */
-public class Jorts.Popover : Gtk.Popover {
-    private weak Jorts.StickyNoteWindow parent_window;
-    private Jorts.ColorBox color_box;
-    private Jorts.MonospaceBox monospace_box;
-    private Jorts.ZoomBox font_size_box;
+public class CargoWrite.Popover : Gtk.Popover {
+    private weak CargoWrite.StickyNoteWindow parent_window;
+    private CargoWrite.ColorBox color_box;
+    private CargoWrite.MonospaceBox monospace_box;
+    private CargoWrite.ZoomBox font_size_box;
 
     public Themes color {
         get {return color_box.color;}
@@ -27,8 +28,8 @@ public class Jorts.Popover : Gtk.Popover {
 
     public int zoom { set {font_size_box.zoom = value;}}
 
-    public signal void theme_changed (Jorts.Themes selected);
-    public signal void zoom_changed (Jorts.Zoomkind zoomkind);
+    public signal void theme_changed (CargoWrite.Themes selected);
+    public signal void zoom_changed (CargoWrite.Zoomkind zoomkind);
     public signal void monospace_changed (bool if_monospace);
 
     static construct
@@ -48,7 +49,7 @@ public class Jorts.Popover : Gtk.Popover {
 
 
     /****************/
-    public Popover (Jorts.StickyNoteWindow window) {
+    public Popover (CargoWrite.StickyNoteWindow window) {
         position = Gtk.PositionType.TOP;
         halign = Gtk.Align.END;
         parent_window = window;
@@ -58,9 +59,9 @@ public class Jorts.Popover : Gtk.Popover {
             margin_bottom = 12
         };
 
-        color_box = new Jorts.ColorBox ();
-        monospace_box = new Jorts.MonospaceBox ();
-        font_size_box = new Jorts.ZoomBox ();
+        color_box = new CargoWrite.ColorBox ();
+        monospace_box = new CargoWrite.MonospaceBox ();
+        font_size_box = new CargoWrite.ZoomBox ();
 
         view.append (color_box);
         view.append (monospace_box);
@@ -94,7 +95,7 @@ public class Jorts.Popover : Gtk.Popover {
 
         parent_window.view.monospace = monospace;
         monospace_box.monospace = monospace;
-        Jorts.NoteData.latest_mono = monospace;
+        CargoWrite.NoteData.latest_mono = monospace;
 
        parent_window.changed ();
     }

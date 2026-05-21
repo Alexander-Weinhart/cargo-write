@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /* CONTENT
@@ -14,7 +15,7 @@ random_emote(skip_emote)
 random_note(skip_theme)
 
 */
-namespace Jorts.Utils {
+namespace CargoWrite.Utils {
 
     /*************************************************/
     /**
@@ -86,7 +87,7 @@ namespace Jorts.Utils {
     */
     public string random_emote (string? skip_emote = null) {
         Gee.ArrayList<string> allemotes = new Gee.ArrayList<string> ();
-        allemotes.add_all_array (Jorts.Constants.EMOTES);
+        allemotes.add_all_array (CargoWrite.Constants.EMOTES);
 
         if (skip_emote != null) {
             allemotes.remove (skip_emote);
@@ -120,7 +121,7 @@ Nobody will believe you hehehe ;)
 I hope my little app brings you a lot of joy
 Have a great day!🎇
 """);
-            blank_slate.theme = Jorts.Themes.BANANA;
+            blank_slate.theme = CargoWrite.Themes.BANANA;
         }
 
         return blank_slate;

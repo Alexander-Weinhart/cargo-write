@@ -3,28 +3,29 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * Responsible for keeping track of various Sticky Notes windows
 * It does its thing on its own. Make sure to call init() to summon all notes from storage
 */
-public class Jorts.NoteManager : Object {
+public class CargoWrite.NoteManager : Object {
 
-    private Jorts.Application application;
+    private CargoWrite.Application application;
     public Gee.ArrayList<StickyNoteWindow> open_notes;
-    public Jorts.Storage storage;
+    public CargoWrite.Storage storage;
     private bool saving_lock = true;
 
     private static uint debounce_timer_id;
 
-    public NoteManager (Jorts.Application app) {
+    public NoteManager (CargoWrite.Application app) {
         this.application = app;
     }
 
     construct {
         open_notes = new Gee.ArrayList<StickyNoteWindow> ();
-        storage = new Jorts.Storage ();
+        storage = new CargoWrite.Storage ();
     }
 
     /*************************************************/
@@ -66,7 +67,7 @@ public class Jorts.NoteManager : Object {
     */
     public void create_note (NoteData? data = null) {
         debug ("Lets do a note");
-        Jorts.StickyNoteWindow note;
+        CargoWrite.StickyNoteWindow note;
 
         if (data != null) {
             note = new StickyNoteWindow (application, data);
@@ -75,7 +76,7 @@ public class Jorts.NoteManager : Object {
             var random_data = new NoteData ();
             
             // One chance at the golden sticky
-            random_data = Jorts.Utils.golden_sticky (random_data);
+            random_data = CargoWrite.Utils.golden_sticky (random_data);
             note = new StickyNoteWindow (application, random_data);
         }
         
@@ -117,7 +118,7 @@ public class Jorts.NoteManager : Object {
             GLib.Source.remove (debounce_timer_id);
         }
 
-        debounce_timer_id = Timeout.add (Jorts.Constants.DEBOUNCE, debounce_handler);
+        debounce_timer_id = Timeout.add (CargoWrite.Constants.DEBOUNCE, debounce_handler);
     }
 
     public bool debounce_handler () {
@@ -129,7 +130,7 @@ public class Jorts.NoteManager : Object {
     private void immediately_save () {
         var array = new Json.Array ();
 
-        foreach (Jorts.StickyNoteWindow note in open_notes) {
+        foreach (CargoWrite.StickyNoteWindow note in open_notes) {
             var data = note.packaged ();
             var object = data.to_json ();
             array.add_object_element (object);

@@ -3,13 +3,14 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * A textview incorporating detecting links and emails
 * Fairly vanilla but having a definition allows to easily extend it
 */
-public class Jorts.TextView : Granite.HyperTextView {
+public class CargoWrite.TextView : Granite.HyperTextView {
 
     private Gtk.EventControllerKey keyboard;
     private string list_item_start;

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>io.github.elly_code.jorts</id>
+    <id>io.github.cargowrite.CargoWrite</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0+</project_license>
     
-    <name translate="no">Jorts</name>
+    <name translate="no">Cargo Write</name>
     <summary>Write on colourful little squares</summary>
     <description>
-        <p>Neither jeans nor shorts, just like jorts!</p>
+        <p>Keep quick notes close at hand on colourful little squares.</p>
         <p>Features include:</p>
         <ul>
             <li>Colourful: Ten pretty themes. Any new note gets a random one</li>
@@ -16,31 +16,24 @@
             <li>Handy: You can open links and emails with Ctrl+Click</li>
             <li>Private: Try the scribble mode!</li>
         </ul>
-        <p>This is a fork of an old version of "Notejot" by lainsce. The community liked it so much, we thought it would be great to revive it!</p>
+        <p>This project continues earlier community work on this style of note app.</p>
     </description>
-    <launchable type="desktop-id">io.github.elly_code.jorts.desktop</launchable>
+    <launchable type="desktop-id">io.github.cargowrite.CargoWrite.desktop</launchable>
 
     <provides>
-        <id>io.github.ellie_commons.jorts</id>
-        <binary>io.github.ellie_commons.jorts</binary>
+        <id>io.github.cargowrite.CargoWrite</id>
+        <binary>io.github.cargowrite.CargoWrite</binary>
     </provides>
     <replaces>
-        <id>io.github.ellie_commons.jorts</id>
+        <id>io.github.cargowrite.CargoWrite</id>
     </replaces>
 
-    <developer id="io.github.elly-code">
-        <name>Lainsce + Stella + Charlie</name>
+    <developer id="io.github.cargowrite">
+        <name>Cargo Write contributors</name>
     </developer>
-    <project_group>elly-code</project_group>
-    <url type="homepage">https://github.com/elly-code/jorts</url>
-    <url type="bugtracker">https://github.com/elly-code/jorts/issues</url>
-    <url type="help">https://github.com/elly-code/jorts/wiki</url>
-    <url type="translate">https://github.com/elly-code/jorts/blob/main/po/README.md</url>
-    <url type="donation">https://ko-fi.com/teamcons</url>
-    <url type="vcs-browser">https://github.com/elly-code/jorts</url>
 
     <content_rating type="oars-1.1"/>
-    <translation type="gettext" source_locale="en_GB">io.github.elly_code.jorts</translation>
+    <translation type="gettext" source_locale="en_GB">io.github.cargowrite.CargoWrite</translation>
     <branding>
       <color type="primary" scheme_preference="light">#64baff</color>
       <color type="primary" scheme_preference="dark">#002e99</color>
@@ -59,7 +52,7 @@
         <keyword>elementary OS</keyword>
     </keywords>
     <suggests>
-        <id>io.github.elly_code.reminduck</id>
+        <id>io.github.cargowrite.reminduck</id>
         <id>com.github.elfenware.badger</id>
         <id>io.github.xchan14.larawan</id>
     </suggests>
@@ -72,49 +65,15 @@
         <value key="x-appcenter-suggested-price">1</value>
     </custom>
 
-    <screenshots>
-        <screenshot type="default">
-            <caption>A sticky note with the "Blueberry" theme</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/default.png</image>
-        </screenshot>
-        <screenshot>
-            <caption>Streaming? Worried of someone looking above your shoulder? Try the scribbly Mode!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/scribbly.png</image>
-        </screenshot>
-        <screenshot>
-            <caption>Look! Ascii art in a sticky note!</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/ascii.png</image>
-        </screenshot>
-        <screenshot environment="pantheon">
-            <caption>The preferences dialog in light mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-light.png</image>
-        </screenshot>
-        <screenshot environment="pantheon:dark">
-            <caption>The preferences dialog in dark mode</caption>
-            <image>https://raw.githubusercontent.com/elly-code/jorts/4.0.0/data/screenshots/preferences-dark.png</image>
-        </screenshot>
-    </screenshots>
-
     <releases>
         <release version="4.0.1" date="2026-01-13">
             <description>
                 <p>Organization change</p>
-                <ul>
-                    <li>From ellie-commons to elly-code</li>
-                </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>Updated sv-SE translation thanks to @yeager!</li>
-                    <li>Added vietnamese translation thanks to @hthienloc!</li>
-                </ul>
             </description>
-            <issues>
-                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
-            </issues>
         </release>
         <release version="4.0.0" date="2025-11-22">
             <description>
-                <p>🚀 4.0.0 Jorts of Hyperspace!</p>
+                <p>🚀 4.0.0 Launch Update</p>
                 <ul>
                     <li>Version 4 to align with Gtk version</li>
                     <li>Added button to toggle lists, and ability to customize them</li>
@@ -124,18 +83,7 @@
                     <li>A couple visual bugfixes as well!</li>
                     <li>Various under the hood performance improvements</li>
                 </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>Updated JA translation thanks to @ryonakano!</li>
-                    <li>You, the user, for liking this lil app!</li>
-                </ul>
             </description>
-            <issues>
-                <issue url="https://github.com/elly-code/jorts/issues/79">Fixed zoom impacting emojichooser and context menu</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/95">Fixed coloring bleeding into icons in emojichooser and context menu</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/78">Added Ctrl+scroll</issue>
-                <issue url="https://github.com/elly-code/jorts/issues/63">Added list feature</issue>
-            </issues>
         </release>
         <release version="3.5.0" date="2025-11-06">
             <description>
@@ -149,7 +97,7 @@
         </release>
         <release version="3.4.0" date="2025-09-30">
             <description>
-                <p>🕷️ 3.4.0 Scary Jorts of Boo</p>
+                <p>🕷️ 3.4.0 Autumn Update</p>
                 <ul>
                     <li>Some UI elements show up after being shown, for a sleek vibe</li>
                     <li>Ctrl+L to focus note title</li>
@@ -159,22 +107,18 @@
                     <li>Cleaner, nicer code under the hood. Probably marginally enhanced performances or less edge bugs</li>
                     <li>Added a reset-settings commandline option. Could be handy.</li>
                 </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>@wpkelso strikes again with an amazing special edition icon!</li>
-                </ul>
             </description>
         </release>
         <release version="3.3.1" date="2025-07-12">
             <description>
                 <ul>
-                    <li>Bugfix: Fix Jorts lingering in the background not opening anymore if all windows were closed (#77)</li>
+                    <li>Bugfix: Fix Cargo Write lingering in the background not opening anymore if all windows were closed (#77)</li>
                 </ul>
             </description>
         </release>
         <release version="3.3.0" date="2025-07-06">
             <description>
-                <p>3.3.0 Star Platinum Jorts</p>
+                <p>3.3.0 Interface Update</p>
                 <ul>
                     <li>Bugfix: Whole window being grabbable interfered with text editing. Only actionbar and header are, now (#75, #76)</li>
                     <li>Added more random titles</li>
@@ -191,18 +135,13 @@
         </release>
         <release version="3.2.0" date="2025-06-03">
             <description>
-                <p>🌈 3.2.0 Jorts of Resilience and Love</p>
+                <p>🌈 3.2.0 Pride Update</p>
                 <ul>
                     <li>Add a cool little animation when enabling/disabling actionbar</li>
                     <li>Fixed blurrinness in high-scaled display</li>
                     <li>Added high-resolution screenshots</li>
                     <li>Last minute bugfix, somehow accels did not work when the Preferences were focused</li>
                     <li>A bit of housekeeping for FR and DE while at it</li>
-                </ul>
-                <p>😎 Guests stars:</p>
-                <ul>
-                    <li>A lovely temporary icon by @wpkelso</li>
-                    <li>Updated EL translations thanks to @OrionasKakomoiroglou!</li>
                 </ul>
             </description>
         </release>

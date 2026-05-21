@@ -2,7 +2,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
- *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2025 Contributions from the ellie_Commons community (github.com/elly-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /*************************************************/
@@ -10,17 +11,17 @@
 * Responsible to apply RedactedScript font
 * Give it a window and it will simply follow settings
 */
-public class Jorts.ColorController : Object {
+public class CargoWrite.ColorController : Object {
 
-    private weak Jorts.StickyNoteWindow window;
+    private weak CargoWrite.StickyNoteWindow window;
 
-    private Jorts.Themes _theme;
-    public Jorts.Themes theme {
+    private CargoWrite.Themes _theme;
+    public CargoWrite.Themes theme {
         get { return _theme;}
         set { on_color_changed (value);}
     }
 
-    public ColorController (Jorts.StickyNoteWindow window) {
+    public ColorController (CargoWrite.StickyNoteWindow window) {
         this.window = window;
     }
 
@@ -28,7 +29,7 @@ public class Jorts.ColorController : Object {
     * Switches stylesheet
     * First use appropriate stylesheet, Then switch the theme classes
     */
-    public void on_color_changed (Jorts.Themes new_theme) {
+    public void on_color_changed (CargoWrite.Themes new_theme) {
         debug ("Updating theme to %s".printf (new_theme.to_string ()));
 
         // Add remove class
@@ -41,10 +42,9 @@ public class Jorts.ColorController : Object {
         _theme = new_theme;
         window.popover.color = new_theme;
         NoteData.latest_theme = new_theme;
-
-        // Avoid using the wrong accent until the popover is closed
-        var stylesheet = "io.elementary.stylesheet." + new_theme.to_string ().ascii_down ();
-        Application.gtk_settings.gtk_theme_name = stylesheet;
+        if (window.is_active) {
+            Application.apply_elementary_theme (new_theme);
+        }
 
         // Cleanup;
         window.changed ();
@@ -58,8 +58,7 @@ public class Jorts.ColorController : Object {
         debug ("Focus changed!");
 
         if (window.is_active) {
-            var stylesheet = "io.elementary.stylesheet." + _theme.to_string ().ascii_down ();
-            Application.gtk_settings.gtk_theme_name = stylesheet;
+            Application.apply_elementary_theme (_theme);
         }
     }
 }

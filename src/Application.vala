@@ -1,6 +1,7 @@
 /*
 * Copyright (c) 2017-2024 Lains
 * Copyright (c) 2025 Stella, Charlie, (teamcons on GitHub) and the Ellie_Commons community
+* Copyright (c) 2026 Alexander Weinhart
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -38,14 +39,14 @@ Jason deals with all the hassle in between all saving/loading steps
 Constants is because i am lazy
 */
 
-public class Jorts.Application : Gtk.Application {
+public class CargoWrite.Application : Gtk.Application {
 
     // Needed by all windows
     public static GLib.Settings gsettings;
     public static Gtk.Settings gtk_settings;
 
-    public Jorts.NoteManager manager;
-    public static Jorts.PreferenceWindow? preferences;
+    public CargoWrite.NoteManager manager;
+    public static CargoWrite.PreferenceWindow? preferences;
 
     // Used for commandline option handling
     public static bool new_note = false;
@@ -60,6 +61,8 @@ public class Jorts.Application : Gtk.Application {
     public const string ACTION_SAVE = "action_save";
 
     public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
+    private static Gtk.CssProvider elementary_theme_provider;
+    private static CargoWrite.Themes current_elementary_theme = CargoWrite.Constants.DEFAULT_THEME;
 
     private const GLib.ActionEntry[] ACTION_ENTRIES = {
         { ACTION_QUIT, quit},
@@ -72,15 +75,17 @@ public class Jorts.Application : Gtk.Application {
 
     public Application () {
         Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE,
-                application_id: Jorts.Constants.RDNN);
+                application_id: CargoWrite.Constants.RDNN);
     }
 
     /*************************************************/
     public override void startup () {
-        debug ("Jorts Startup…");
+        debug ("Cargo Write startup...");
+        print ("[CARGO_WRITE] startup begin\n");
         base.startup ();
         Gtk.init ();
         Granite.init ();
+        Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/github/cargowrite/CargoWrite/icons");
 
         add_action_entries (ACTION_ENTRIES, this);
         set_accels_for_action ("app.action_quit", {"<Control>Q"});
@@ -104,32 +109,22 @@ public class Jorts.Application : Gtk.Application {
 
 
 
-        // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
         var granite_settings = Granite.Settings.get_default ();
         gtk_settings = Gtk.Settings.get_default ();
-        gtk_settings.gtk_icon_theme_name = "elementary";
-        gtk_settings.gtk_theme_name =   "io.elementary.stylesheet." + Jorts.Constants.DEFAULT_THEME.to_string ().ascii_down ();
 
         // Also follow dark if system is dark lIke mY sOul.
         gtk_settings.gtk_application_prefer_dark_theme = (
-	            granite_settings.prefers_color_scheme == DARK
+	            granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
             );
 	
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = (
-                    granite_settings.prefers_color_scheme == DARK
+                    granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
                 );
+            apply_elementary_theme (current_elementary_theme);
         });
 
-        print ("""
-🎉✨ ACTIVATING: SUPER COOL JORTS 😎🔥❗🎶🤌
-Your Notes are all belong to us!
-      _       _
-    (\o/)   (\o/)    <--- Tiny electric angels working in the background
-     /_\     /_\
-
-Please wait while the app remembers all the things...
-""");
+        print ("Cargo Write is starting up...\n");
 
         /* Quit if all sticky notes are closed and preferences arent shown */
         window_removed.connect (check_if_quit);
@@ -137,7 +132,7 @@ Please wait while the app remembers all the things...
 
         // build all the stylesheets
         var app_provider = new Gtk.CssProvider ();
-        app_provider.load_from_resource ("/io/github/elly_code/jorts/Application.css");
+        app_provider.load_from_resource ("/io/github/cargowrite/CargoWrite/Application.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             app_provider,
@@ -145,17 +140,26 @@ Please wait while the app remembers all the things...
         );
 
         var theme_provider = new Gtk.CssProvider ();
-        theme_provider.load_from_resource ("/io/github/elly_code/jorts/Themes.css");
+        theme_provider.load_from_resource ("/io/github/cargowrite/CargoWrite/Themes.css");
         Gtk.StyleContext.add_provider_for_display (
             Gdk.Display.get_default (),
             theme_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION + 1
         );
+
+        elementary_theme_provider = new Gtk.CssProvider ();
+        Gtk.StyleContext.add_provider_for_display (
+            Gdk.Display.get_default (),
+            elementary_theme_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_THEME + 1
+        );
+        apply_elementary_theme (CargoWrite.Constants.DEFAULT_THEME);
+        print ("[CARGO_WRITE] startup complete\n");
     }
 
     /*************************************************/        
     static construct {
-        gsettings = new GLib.Settings (Jorts.Constants.RDNN);
+        gsettings = new GLib.Settings (CargoWrite.Constants.RDNN);
     }
 
     /*************************************************/
@@ -167,12 +171,13 @@ Please wait while the app remembers all the things...
         Intl.textdomain (GETTEXT_PACKAGE);
         
         //add_main_option_entries (CMD_OPTION_ENTRIES);
-        manager = new Jorts.NoteManager (this);
+        manager = new CargoWrite.NoteManager (this);
     }
 
     // Clicked: Either show all windows, or rebuild from storage
     protected override void activate () {
-        debug ("[JORTS] Jorts, activate!");
+        debug ("[CARGO_WRITE] activate");
+        print ("[CARGO_WRITE] activate begin\n");
 
         // Test Lang
         //GLib.Environment.set_variable ("LANGUAGE", "pt_br", true);
@@ -188,10 +193,27 @@ Please wait while the app remembers all the things...
 
         if (new_note) {manager.create_note (); new_note = false;}
         if (show_pref) {action_show_preferences (); show_pref = false;}
+        print ("[CARGO_WRITE] activate complete windows=%u\n", get_windows ().length ());
     }
 
     public static int main (string[] args) {
         return new Application ().run (args);
+    }
+
+    public static void apply_elementary_theme (CargoWrite.Themes theme) {
+        var resource_path = get_elementary_theme_resource (theme);
+        current_elementary_theme = theme == CargoWrite.Themes.IDK ? CargoWrite.Constants.DEFAULT_THEME : theme;
+        debug ("Loading vendored elementary theme %s".printf (resource_path));
+        elementary_theme_provider.load_from_resource (resource_path);
+    }
+
+    private static string get_elementary_theme_resource (CargoWrite.Themes theme) {
+        var resolved_theme = theme == CargoWrite.Themes.IDK ? CargoWrite.Constants.DEFAULT_THEME : theme;
+        var suffix = gtk_settings.gtk_application_prefer_dark_theme ? "-dark" : "";
+        return "/io/github/cargowrite/CargoWrite/elementary/%s%s.css".printf (
+            resolved_theme.to_string ().ascii_down (),
+            suffix
+        );
     }
 
     private void action_new () {
@@ -203,7 +225,7 @@ Please wait while the app remembers all the things...
         debug ("Showing preferences!");
 
         if (Application.preferences == null) {
-            Application.preferences = new Jorts.PreferenceWindow (this);
+            Application.preferences = new CargoWrite.PreferenceWindow (this);
             Application.preferences.close_request.connect_after (() => {Application.preferences = null; return false;});
         }
 
@@ -240,6 +262,7 @@ Please wait while the app remembers all the things...
 
     public override int command_line (ApplicationCommandLine command_line) {
         debug ("Parsing commandline arguments...");
+        print ("[CARGO_WRITE] command_line begin\n");
 
         OptionEntry[] CMD_OPTION_ENTRIES = {
                 {"new-note", 'n', OptionFlags.NONE, OptionArg.NONE, ref new_note, _("Create a new note"), null},
@@ -267,7 +290,9 @@ Please wait while the app remembers all the things...
         }
 
         hold ();
+        print ("[CARGO_WRITE] command_line parsed new_note=%s show_pref=%s\n", new_note.to_string (), show_pref.to_string ());
         activate ();
+        print ("[CARGO_WRITE] command_line end\n");
         return 0;
     }
 }

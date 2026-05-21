@@ -3,18 +3,19 @@
  * SPDX-FileCopyrightText:  2017-2024 Lains
  *                          2025 Stella & Charlie (teamcons.carrd.co)
  *                          2025 Contributions from the ellie_Commons community (github.com/ellie-commons/)
+ *                          2026 Alexander Weinhart
  */
 
 /**
 * A box mimicking the one in elementary OS Appearance settings page
 * It shows a row with all the colours
 */
-public class Jorts.ColorBox : Gtk.Box {
+public class CargoWrite.ColorBox : Gtk.Box {
 
     public SimpleAction accent_color_action;
 
-    public Jorts.Themes color {
-        get {return (Jorts.Themes)accent_color_action.get_state ();}
+    public CargoWrite.Themes color {
+        get {return (CargoWrite.Themes)accent_color_action.get_state ();}
         set {accent_color_action.set_state (value);}
     }
 
@@ -67,7 +68,7 @@ public class Jorts.ColorBox : Gtk.Box {
     private void set_broadcast (GLib.Variant? value) {
         if (!accent_color_action.get_state ().equal (value)) {
             accent_color_action.set_state (value);
-            theme_changed ((Jorts.Themes)color);
+            theme_changed ((CargoWrite.Themes)color);
         }
     }
 }
